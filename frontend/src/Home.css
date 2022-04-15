@@ -1,0 +1,43 @@
+/** Variables CSS **/
+
+:root {
+  /** Color variables **/
+  --light-color: white;
+  --dark-color: black;
+  --alt-color: blue;
+
+  /** Font Size **/
+
+  --text-size-mobile: 1rem;
+  --text-size-desk: 1rem;
+
+  --title-size-mobile: 2rem;
+  --title-size-desk: 2rem;
+
+  /** Font Family **/
+
+  --text-font: ;
+  --title-font: ;
+}
+
+.home_main_tg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home_logo_tg {
+  margin-top: 5rem;
+  width: 130%;
+}
+
+.home_bouton_tg {
+  background-color: var(--light-color);
+  border-radius: 3.5rem;
+  color: var(--dark-color);
+  font-size: var(--title-size-mobile);
+  font-weight: 700;
+  margin: 5rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+}

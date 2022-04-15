@@ -1,0 +1,28 @@
+/** Variables CSS **/
+
+:root {
+  /** Color variables **/
+  --light-color: white;
+  --dark-color: black;
+  --alt-color: blue;
+
+  /** Font Size **/
+
+  --text-size-mobile: 0.5rem;
+  --text-size-desk: 1rem;
+
+  --title-size-mobile: 1rem;
+  --title-size-desk: 2rem;
+
+  /** Font Family **/
+
+  --text-font: ;
+  --title-font: ;
+}
+
+.header_div_tg {
+  border-bottom: solid var(--light-color) 0.2rem;
+  height: 200px;
+  color: var(--light-color);
+  text-align: center;
+}
