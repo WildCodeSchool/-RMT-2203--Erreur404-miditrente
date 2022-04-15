@@ -7,37 +7,32 @@ function Nav() {
 
   const handleShowLinks = () => setShowLinks(!showlinks);
   return (
-    <nav className={`navbar ${showlinks ? "show-nav" : "hidden-nav"}`}>
-      <div calssNmae="navbar_logo">Logo</div>
-      <ul className="navbar_links">
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Accueil
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
+    <nav className={`navbar_mt ${showlinks ? "show_nav_mt" : "hidden_na_mt"}`}>
+      <div calssNmae="navbar_logo_mt">Logo</div>
+      <ul className="navbar_links_mt">
+        <li className="navbar_item_mt">
+          <a href="/" className="navbar_link_mt">
             A propos
           </a>
         </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
+        <li className="navbar_item_mt">
+          <a href="/" className="navbar_link_mt">
             Concentration Co2
           </a>
         </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
+        <li className="navbar_item_mt">
+          <a href="/" className="navbar_link_mt">
             Fonte des glaces
           </a>
         </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
+        <li className="navbar_item_mt">
+          <a href="/" className="navbar_link_mt">
             Contact
           </a>
         </li>
       </ul>
-      <button className="navbar_burger" onClick={handleShowLinks}>
-        <span className="burger-bar" />
+      <button className="navbar_burger_mt" onClick={handleShowLinks}>
+        <span className="burger_bar_mt" />
       </button>
     </nav>
   );
