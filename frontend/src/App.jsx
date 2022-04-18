@@ -1,5 +1,4 @@
 import Charts from "./pages/Charts";
-
 import "./App.css";
 
 function App() {
