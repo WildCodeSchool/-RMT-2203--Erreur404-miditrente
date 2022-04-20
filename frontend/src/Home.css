@@ -1,7 +1,6 @@
 /** Variables CSS **/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200");
-
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');:root {
   --light: rgb(255, 255, 255);
   --dark: rgb(0, 0, 0);
   --title-color: rgb(255, 255, 255);
@@ -25,15 +24,22 @@
 }
 
 .home_bouton_tg {
-  background-image: url("assets/terre.gif");
-  background-position: center;
+  background-color: black;
   border-radius: 3.5rem;
-  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+  box-shadow: -5px -5px 30px 5px red;
   font-size: var(--title-font-size);
-  font-family: var(--title-font);
-  font-weight: 900;
+  font-family: --title-font;
+  font-weight: 800;
   margin: 7rem 0;
-  padding: 1rem 3rem;
+  padding: 1.2rem 3rem;
   text-align: center;
-  color: red;
+  color: white;
+}
+
+@media screen and (min-width : 600px) {
+
+  .home_logo_tg {
+    width: 50%;
+  }
+  
 }
