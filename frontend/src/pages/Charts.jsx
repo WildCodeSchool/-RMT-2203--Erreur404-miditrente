@@ -1,55 +1,80 @@
+import { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "Chart.js Line Chart",
+    },
+  },
+};
 
 function Charts() {
+  const [dataSet, setDataSet] = useState({
+    labels: [],
+    datasets: [
+      {
+        label: "extent",
+        data: [],
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "area",
+        data: [],
+        borderColor: "rgb(53, 162, 235)",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  });
+
+  const prepareDataSet = (jeux) => {
+    /** Récupération du jeux d'année */
+    const dataSetProv = { ...dataSet };
+    jeux.forEach((jeu) => {
+      dataSetProv.labels.push(jeu.year);
+      dataSetProv.datasets[0].data.push(jeu.extent);
+      dataSetProv.datasets[1].data.push(jeu.area);
+    });
+    setDataSet(dataSetProv);
+  };
+  useEffect(() => {
+    fetch("https://global-warming.org/api/arctic-api")
+      .then((res) => res.json())
+      .then((data) => prepareDataSet(data.result));
+  }, []);
+
   return (
-    <canvas className="graph1_dd" width="400" height="400">
-      <Line />
+    <div>
+      {console.warn(dataSet)}
+      {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
       <p>component LINE should be up here👆</p>
-    </canvas>
+    </div>
   );
 }
-/*
-const DATA_COUNT = 12;
-const labels = [];
-for (let i = 0; i < DATA_COUNT; ++i) {
-  labels.push(i.toString());
-}
-const datapoints = [0, 20, 20, 60, 60, 120, NaN, 180, 120, 125, 105, 110, 170];
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: 'Cubic interpolation (monotone)',
-      data: datapoints,
-      borderColor: Utils.CHART_COLORS.red,
-      fill: false,
-      cubicInterpolationMode: 'monotone',
-      tension: 0.4
-    }, {
-      label: 'Cubic interpolation',
-      data: datapoints,
-      borderColor: Utils.CHART_COLORS.blue,
-      fill: false,
-      tension: 0.4
-    }, {
-      label: 'Linear interpolation (default)',
-      data: datapoints,
-      borderColor: Utils.CHART_COLORS.green,
-      fill: false
-    }
-  ]
-};
-*/
-
-/*
-<div className="chart">
-        <Line data={this.state.chartData}
-        width="600"
-        height="400"
-        options={{
-          maintainAspectRatio: false,
-          xAxes: [{gridLines: {display: false}}]
-        }} />
-      </div>
-*/
 export default Charts;
