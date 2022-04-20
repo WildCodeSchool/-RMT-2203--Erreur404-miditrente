@@ -10,23 +10,23 @@ function Counter({
       <section className="timer_parent_qb">
         <div className="timer_clock_qb">
           <section className="timer_text_qb">
-            <p>{timerDays}</p>
+            <p className="p_timer_qb">{timerDays}</p>
             <small>Jours</small>
           </section>
           <section className="timer_text_qb">
-            <p>{timerHours}</p>
+            <p className="p_timer_qb">{timerHours}</p>
             <small>Heures</small>
           </section>
           <div className="timer_sup_qb">
-            <p>{timerYears}</p>
+            <p className="p_timer_qb">{timerYears}</p>
             <small>Ans</small>
           </div>
           <section className="timer_text_qb">
-            <p>{timerMinutes}</p>
+            <p className="p_timer_qb">{timerMinutes}</p>
             <small>Minutes</small>
           </section>
           <section className="timer_text_qb">
-            <p>{timerSecondes}</p>
+            <p className="p_timer_qb">{timerSecondes}</p>
             <small>Secondes</small>
           </section>
         </div>
