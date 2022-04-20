@@ -8,6 +8,7 @@
   --title-font-size: ;
   --text-font-size: ;
 }
+
 .navbar_mt {
   display: flex;
   flex-wrap: wrap;

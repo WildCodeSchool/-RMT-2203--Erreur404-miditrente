@@ -1,0 +1,39 @@
+/** Variables CSS **/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200");
+
+:root {
+  --light: rgb(255, 255, 255);
+  --dark: rgb(0, 0, 0);
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --title-font-size: ;
+  --text-font-size: ;
+  }
+  
+
+.home_main_tg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_logo_tg {
+  width: 95%; 
+}
+
+.home_bouton_tg {
+  background-image: url("assets/terre.gif");
+  background-position: center;
+  border-radius: 3.5rem;
+  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+  font-size: var(--title-font-size);
+  font-family: var(--title-font);
+  font-weight: 900;
+  margin: 7rem 0;
+  padding: 1rem 3rem;
+  text-align: center;
+  color: red;
+}
