@@ -1,4 +1,4 @@
-import Charts from "./pages/Charts";
+import Charts from "./pages/ChartsLine";
 import "./App.css";
 
 function App() {
