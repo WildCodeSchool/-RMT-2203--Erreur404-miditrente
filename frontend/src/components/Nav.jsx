@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
@@ -11,24 +12,34 @@ function Nav() {
       <div calssName="navbar_logo_mt">Logo</div>
       <ul className="navbar_links_mt">
         <li className="navbar_item_mt">
-          <a href="/" className="navbar_link_mt">
-            A propos
-          </a>
+          <Link to="/" className="navbar_link_mt">
+            {" "}
+            Accueil{" "}
+          </Link>
         </li>
         <li className="navbar_item_mt">
-          <a href="/" className="navbar_link_mt">
-            Concentration Co2
-          </a>
+          <Link to="/Info" className="navbar_link_mt">
+            {" "}
+            A propos{" "}
+          </Link>
         </li>
         <li className="navbar_item_mt">
-          <a href="/" className="navbar_link_mt">
-            Fonte des glaces
-          </a>
+          <Link to="/Co2" className="navbar_link_mt">
+            {" "}
+            Concentration Co2{" "}
+          </Link>
         </li>
         <li className="navbar_item_mt">
-          <a href="/" className="navbar_link_mt">
-            Contact
-          </a>
+          <Link to="/Fonte" className="navbar_link_mt">
+            {" "}
+            Fonte des glaces{" "}
+          </Link>
+        </li>
+        <li className="navbar_item_mt">
+          <Link to="/Contact" className="navbar_link_mt">
+            {" "}
+            Contact{" "}
+          </Link>
         </li>
       </ul>
       <button className="navbar_burger_mt" onClick={handleShowLinks}>

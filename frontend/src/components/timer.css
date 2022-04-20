@@ -20,13 +20,13 @@
 .timer_center_qb {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
 }
 
-p {
+.p_timer_qb {
   font-weight: bold;
   font-size: 3rem;
   margin: 0;
+  color: red;
 }
 
 small {
