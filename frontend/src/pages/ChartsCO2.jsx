@@ -34,7 +34,7 @@ const options = {
   },
 };
 
-function Charts() {
+function ChartsCO2() {
   const [dataSet, setDataSet] = useState({
     labels: [],
     datasets: [
@@ -53,23 +53,23 @@ function Charts() {
     ],
   });
   const prepaConfig = (data) => {
-    options.plugins.title.text = `Fonte des glaces du Cercle Polaire (de ${
-      data[0].year
-    } à ${data[data.length - 1].year})`;
+    options.plugins.title.text = `Concentration de Dioxyde de Carbone dans l'atmosphère (de ${
+      data[0].day
+    } à ${data[data.length - 1].day})`;
   };
 
   const prepareDataSet = (data) => {
-    /** Récupération du jeu d'année */
+    /** Récupération du jeu dde dates */
     const dataSetProv = { ...dataSet };
     data.forEach((el) => {
-      dataSetProv.labels.push(el.year);
-      dataSetProv.datasets[0].data.push(el.extent);
-      dataSetProv.datasets[1].data.push(el.area);
+      dataSetProv.labels.push(el.day);
+      // dataSetProv.datasets[0].data.push(el.extent);
+      // dataSetProv.datasets[1].data.push(el.area);
     });
     setDataSet(dataSetProv);
   };
   useEffect(() => {
-    fetch("https://global-warming.org/api/arctic-api")
+    fetch("https://global-warming.org/api/co2-api")
       .then((res) => res.json())
       .then((data) => {
         prepareDataSet(data.result);
@@ -79,28 +79,9 @@ function Charts() {
 
   return (
     <div>
-      {console.warn(dataSet.labels)};
       {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
-      <p>
-        Ice Extent et Ice Area sont deux mesures différentes de la surface de
-        glace au Pôle, utilisée par différents organismes. Le point commun des
-        deux méthodes consiste à diviser la zone d&apos;étude en blocs de
-        référence.
-      </p>
-      <p>
-        <strong>Ice Extent:</strong> Cette mesure est la plus globale et ne
-        prend pas en compte les zones non couvertes par la glace à
-        l&apos;intérieur de la zone couverte. Chaque bloc de référence est
-        considéré de manière binaire au-dessus d&apos;un seuil de 15%: absence
-        de glace ou glace omniprésente.
-      </p>
-      <p>
-        <strong>Ice Area:</strong> Cette mesure est plus précise que la
-        précédente et prend en compte la quantité de glace par bloc de référence
-        en pourcentage. au dessus du seuil de 15%. Un bloc peut ainsi contenir
-        15% de glace, ou plus.
-      </p>
+      <p>text</p>
     </div>
   );
 }
-export default Charts;
+export default ChartsCO2;
