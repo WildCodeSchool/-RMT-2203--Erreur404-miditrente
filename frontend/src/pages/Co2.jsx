@@ -1,4 +1,5 @@
 import Explication from "../components/Explication";
+
 import "../CO2.css";
 
 function Co2() {
