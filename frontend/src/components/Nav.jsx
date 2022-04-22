@@ -9,7 +9,7 @@ function Nav() {
   const handleShowLinks = () => setShowLinks(!showlinks);
   return (
     <nav className={`navbar_mt ${showlinks ? "show_nav_mt" : "hidden_na_mt"}`}>
-      <div calssName="navbar_logo_mt">Logo</div>
+      <div className="navbar_logo_mt">Logo</div>
       <ul className="navbar_links_mt">
         <li className="navbar_item_mt">
           <Link to="/" className="navbar_link_mt">
