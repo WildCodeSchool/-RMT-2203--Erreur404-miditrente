@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import "./timer.css";
 import Counter from "./Counter";
+
+import "./timer.css";
 
 function Timer() {
   // initiation des states
