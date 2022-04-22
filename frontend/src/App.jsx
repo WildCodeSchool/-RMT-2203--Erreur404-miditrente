@@ -1,12 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
-import Contact from "./pages/Contact";
+
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 import Co2 from "./pages/Co2";
 import Fonte from "./pages/Fonte";
 import Info from "./pages/Info";
 import Nav from "./components/Nav";
+
+import "./App.css";
 
 function App() {
   return (

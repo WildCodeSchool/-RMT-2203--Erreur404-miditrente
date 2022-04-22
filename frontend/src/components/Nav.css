@@ -1,3 +1,4 @@
+
 :root {
   --light: rgb(255, 255, 255);
   --dark: rgb(0, 0, 0);
@@ -8,27 +9,46 @@
   --title-font-size: ;
   --text-font-size: ;
 }
+.nav_logo_mt {
+  color: var(--light);
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
+  margin-left: 0.6rem;
+}
+
 .navbar_mt {
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position: fixed;
   width: 100%;
   min-height: 75px;
   background-color: var(--dark);
   color: var(--light);
 }
-
-.navbar_link_mt {
-  padding: 0 0.3rem;
-  color: inherit;
-  display: block;
-  padding: 1.5rem;
-  font-size: 6vw;
+.navbar_links_mt {
+  display: flex;
 }
 
-.navbar_links_mt {
+.navbar_link_mt {
+  color: var(--light);
+  padding: 1rem;
+}
+.navbar_burger_mt {
+  background: transparent;
+  border: none;
+  color: inherit;
+  
+  
+}
+@media screen and (max-width:768px) {
+ .navbar_links_mt {
   flex-direction: column;
   justify-content: center;
   position: fixed;
@@ -40,9 +60,19 @@
   align-items: center;
   visibility: hidden;
 }
+.navbar_burger_mt {
+  display: block;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 1.8rem;
+  right: 3rem;
+}
+
 .show_nav_mt .navbar_links_mt {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: center;
   width: 100vw;
   right: 0;
   visibility: visible;
@@ -55,11 +85,17 @@
   height: 1px;
   background: var(--light);
 }
-.navbar_burger_mt {
+.navbar_link_mt {
+  display: block;
+  padding: 1.5rem;
+  font-size: 6vw;
+}
+.nav_burger_mt {
   display: block;
   position: fixed;
   top: 2rem;
   right: 4rem;
+  
 }
 .navbar_burger_mt:hover {
   cursor: pointer;
@@ -71,19 +107,17 @@
   display: block;
   width: 40px;
   height: 3px;
-  position: inherit;
+  position: relative;
   border-radius: 3px;
   background: var(--light);
   transition: all 0.5s ease-in-out;
 }
-
 .burger_bar_mt::before,
 .burger_bar_mt::after {
   content: "";
   position: absolute;
   left: 0;
 }
-
 .burger_bar_mt::before {
   transform: translateY(-12px);
 }
@@ -91,13 +125,18 @@
 .burger_bar_mt::after {
   transform: translateY(12px);
 }
+
 .show_nav_mt .burger_bar_mt {
   width: 0;
   background: transparent;
 }
+
 .show_nav_mt .burger_bar_mt::before {
   transform: rotate(40deg);
 }
+
 .show_nav_mt .burger_bar_mt::after {
   transform: rotate(-40deg);
 }
+}
+
