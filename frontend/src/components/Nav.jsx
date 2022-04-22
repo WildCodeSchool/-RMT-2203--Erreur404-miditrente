@@ -6,7 +6,6 @@ import "./Nav.css";
 function Nav() {
   const [showlinks, setShowLinks] = useState(false);
 
-  const handleShowLinks = () => setShowLinks(!showlinks);
   return (
     <nav className={`navbar_mt ${showlinks ? "show_nav_mt" : "hidden_nav_mt"}`}>
       <div className="navbar_logo_mt" />
@@ -15,17 +14,29 @@ function Nav() {
       </Link>
       <ul className="navbar_links_mt">
         <li className="navbar_item_mt">
-          <Link to="/" className="navbar_link_mt" onClick={handleShowLinks}>
+          <Link
+            to="/"
+            className="navbar_link_mt"
+            onClick={() => setShowLinks(!showlinks)}
+          >
             Accueil
           </Link>
         </li>
         <li className="navbar_item_mt">
-          <Link to="/Info" className="navbar_link_mt" onClick={handleShowLinks}>
+          <Link
+            to="/Info"
+            className="navbar_link_mt"
+            onClick={() => setShowLinks(!showlinks)}
+          >
             A propos
           </Link>
         </li>
         <li className="navbar_item_mt">
-          <Link to="/Co2" className="navbar_link_mt" onClick={handleShowLinks}>
+          <Link
+            to="/Co2"
+            className="navbar_link_mt"
+            onClick={() => setShowLinks(!showlinks)}
+          >
             Concentration Co2
           </Link>
         </li>
@@ -33,7 +44,7 @@ function Nav() {
           <Link
             to="/Fonte"
             className="navbar_link_mt"
-            onClick={handleShowLinks}
+            onClick={() => setShowLinks(!showlinks)}
           >
             Fonte des glaces
           </Link>
@@ -42,13 +53,16 @@ function Nav() {
           <Link
             to="/Contact"
             className="navbar_link_mt"
-            onClick={handleShowLinks}
+            onClick={() => setShowLinks(!showlinks)}
           >
             Contact
           </Link>
         </li>
       </ul>
-      <button className="navbar_burger_mt" onClick={handleShowLinks}>
+      <button
+        className="navbar_burger_mt"
+        onClick={() => setShowLinks(!showlinks)}
+      >
         <span className="burger_bar_mt" />
       </button>
     </nav>
