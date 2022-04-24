@@ -20,35 +20,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 0;
   border-radius: 2rem;
   width: 100%;
-  margin-top: 1rem;
-}
-
-.actions_container_tg * {
-  background-color: inherit;
+  margin-top: 2rem;
 }
 
 .actions_EngagementType_tg {
-  background-color: red;
+  background-color: var(--light);
+  color: var(--dark);
   padding: 0.7rem;
   border-radius: 0.8rem 0 0 0.8rem;
   width: 68%;
   height: 5rem;
   font-size: 1rem;
+  box-shadow: -2.5px -2.5px 20px 2.5px var(--light);
+
 }
 
 .actions_bouton_tg {
-  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  border: 0;
+  background-color: var(--dark);
+  color: var(--light) ;
   padding: 0.7rem;
   border-radius: 0 0.8rem 0.8rem 0;
   width: 25%;
   height: 5rem;
   font-size: 0.65rem;
+  box-shadow: 2.5px -2.5px 20px 2.5px var(--light);
+
 }
 
-.actions_bouton_tg span {
+.actions_new_bouton_tg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  border:0;
+  background-color: blueviolet;
+  color: var(--light);
+  padding: 0.7rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+  width: 25%;
+  height: 5rem;
+  font-size: 0.65rem;
+  box-shadow: 2.5px -2.5px 20px 2.5px var(--light);
+
+}
+
+.actions_container_tg span {
   font-size: 1.5rem;
   text-align: center;
+  background-color: inherit;
 }
