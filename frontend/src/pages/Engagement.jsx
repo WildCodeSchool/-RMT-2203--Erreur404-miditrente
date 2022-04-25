@@ -5,8 +5,6 @@ import engagementData from "../datas/engagement-data";
 import "./Engagement.css";
 
 function Engagement() {
-  // const [dataTable, setDataTable] = useState(engagementData);
-
   return (
     <div className="engagement_main_tg">
       <h1 className="engagement_h1_tg"> Agir maintenant </h1>
