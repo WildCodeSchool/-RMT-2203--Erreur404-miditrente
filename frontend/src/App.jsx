@@ -10,8 +10,6 @@ import Fonte from "./pages/Fonte";
 import Info from "./pages/Info";
 import Nav from "./components/Nav";
 
-import "./App.css";
-
 function App() {
   return (
     <Router>
