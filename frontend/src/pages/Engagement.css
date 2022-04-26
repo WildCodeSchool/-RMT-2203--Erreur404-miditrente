@@ -1,6 +1,7 @@
 :root {
   --light: rgba(255, 255, 255, 0.872);
   --dark: rgb(0, 0, 0);
+  --alt-color : blueviolet;
   --title-color: rgb(255, 255, 255);
   --text-color: rgb(255, 255, 255);
   --title-font: "Poppins", sans-serif;
@@ -16,24 +17,38 @@
   align-items: center;
 }
 
+.actions_main_tg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.actions_new_main_tg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 2s ease-in-out;
+}
+
+
 .actions_container_tg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2rem;
   width: 100%;
   margin-top: 2rem;
 }
 
-.actions_EngagementType_tg {
+.actions_engagementType_tg {
   background-color: var(--light);
   color: var(--dark);
   padding: 0.7rem;
-  border-radius: 0.8rem 0 0 0.8rem;
+  border-radius: 0.8rem 0 0 0;
   width: 68%;
   height: 5rem;
   font-size: 1rem;
-  box-shadow: -2.5px -2.5px 20px 2.5px var(--light);
+  margin-bottom: 0;
 
 }
 
@@ -41,16 +56,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 1rem;
   border: 0;
   background-color: var(--dark);
+  border: solid white 1px;
   color: var(--light) ;
   padding: 0.7rem;
-  border-radius: 0 0.8rem 0.8rem 0;
+  border-radius: 0 0.8rem 0rem 0;
   width: 25%;
   height: 5rem;
   font-size: 0.65rem;
-  box-shadow: 2.5px -2.5px 20px 2.5px var(--light);
   transition: ease-out 1s;
 }
 
@@ -58,16 +72,15 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
-  margin-bottom: 1rem;
   border:0;
-  background-color: blueviolet;
+  background-color: var(--alt-color);
+  border: solid white 1px;
   color: var(--light);
   padding: 0.7rem;
-  border-radius: 0 0.8rem 0.8rem 0;
+  border-radius: 0 0.8rem 0 0;
   width: 25%;
   height: 5rem;
   font-size: 0.65rem;
-  box-shadow: 2.5px -2.5px 20px 2.5px var(--light);
   transition: ease-out 1s;
 
 }
@@ -76,4 +89,12 @@
   font-size: 1.5rem;
   text-align: center;
   background-color: inherit;
+}
+
+.actions_engagementExplanation_tg {
+  background-color: blue;
+  border: solid white 1px;
+  padding: 0.7rem;
+  width: 93%;
+  border-radius: 0 0 0.8rem 0.8rem;
 }
