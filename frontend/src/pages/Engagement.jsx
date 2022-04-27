@@ -13,10 +13,10 @@ function Engagement() {
       <h1 className="engagement_h1_tg"> Agir maintenant </h1>
       <Filter value={value} handleValue={setValue} />
       {engagementData
+        .filter((name) => name.text.includes(value))
         .sort((a, b) => {
           return b.likes - a.likes;
         })
-        .filter((name) => name.text.includes(value))
         .map((data) => (
           <Actions data={data} />
         ))}
