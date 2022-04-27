@@ -1,7 +1,7 @@
 :root {
   --light: rgba(255, 255, 255, 0.872);
   --dark: rgb(0, 0, 0);
-  --alt-color : blueviolet;
+  --alt-color: blueviolet;
   --title-color: rgb(255, 255, 255);
   --text-color: rgb(255, 255, 255);
   --title-font: "Poppins", sans-serif;
@@ -17,24 +17,26 @@
   align-items: center;
 }
 
-.actions_main_tg{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.actions_new_main_tg{
+.actions_main_tg {
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 2s ease-in-out;
+  width: 100%;
 }
 
+.actions_new_main_tg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 2s ease-in-out;
+  width: 100%;
+}
 
 .actions_container_tg {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   margin-top: 2rem;
@@ -43,46 +45,34 @@
 .actions_engagementType_tg {
   background-color: var(--light);
   color: var(--dark);
-  padding: 0.7rem;
-  border-radius: 0.8rem 0 0 0;
-  width: 68%;
-  height: 5rem;
+  text-align: center;
+  padding: 0.7rem 0.7rem 0;
+  border-radius: 0.8rem 0.8rem 0 0;
+  width: 93%;
   font-size: 1rem;
   margin-bottom: 0;
-
 }
 
 .actions_bouton_tg {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   border: 0;
-  background-color: var(--dark);
+  background-color: var(--light);
   border: solid white 1px;
-  color: var(--light) ;
+  color: var(--dark);
   padding: 0.7rem;
-  border-radius: 0 0.8rem 0rem 0;
-  width: 25%;
-  height: 5rem;
+  width: 93%;
   font-size: 0.65rem;
-  transition: ease-out 1s;
+  transition: ease-out 2s;
 }
 
 .actions_new_bouton_tg {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
-  border:0;
-  background-color: var(--alt-color);
+  border: 0;
+  background-color: var(--light);
   border: solid white 1px;
-  color: var(--light);
+  color: var(--dark);
   padding: 0.7rem;
-  border-radius: 0 0.8rem 0 0;
-  width: 25%;
-  height: 5rem;
+  width: 93%;
   font-size: 0.65rem;
-  transition: ease-out 1s;
-
+  transition: ease-out 2s;
 }
 
 .actions_container_tg span {
@@ -97,4 +87,18 @@
   padding: 0.7rem;
   width: 93%;
   border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.filter_main_tg * {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.actions_engagement_like_button_tg{
+  width: 20px;
+  background-color: white;
+}
+
+.actions_div_tg {
+  background-color: white;
 }
