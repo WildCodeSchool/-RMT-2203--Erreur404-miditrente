@@ -9,15 +9,19 @@
   --text-font-size: ;
 }
 
-.main_contact_qb {
+.contact_qb {
   justify-content: center;
   display: flex;
   height: 40rem;
   min-height: 100vh;
-  background-color: var(--dark);
+}
+
+.form_qb > h1 {
+  border-radius: 20px;
 }
 
 .form_qb {
+  margin-top: 10rem;
   background-color: lightgray;
   width: 25rem;
   height: 32rem;
@@ -26,12 +30,18 @@
   justify-content: center;
 }
 
+.form_qb * {
+  background-color: lightgray;
+}
+
 .label_qb {
+  color: var(--dark);
   display: block;
   margin-block-start: 1em;
 }
 
 .input_qb {
+  background-color: white;
   margin-block-start: 1em;
   text-align: center;
   height: 1.7rem;
@@ -40,12 +50,14 @@
 }
 
 .textaera_qb {
+  background-color: white;
   margin-block-start: 1em;
   width: 90%;
   border-radius: 8px;
 }
 
 .button_qb {
+  background-color: white;
   margin-top: 1rem;
   font-size: large;
   width: 5.5rem;

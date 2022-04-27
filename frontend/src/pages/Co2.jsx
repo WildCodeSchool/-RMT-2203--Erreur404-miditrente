@@ -6,7 +6,7 @@ function Co2() {
   return (
     <div className="co2_main_tg">
       <h1>Concentration de Co2</h1>
-      <div className="co2_graph_tg" />
+      <img src="../assets/temp.png" alt="graph temperature" />
       <Explication />
       <Explication />
     </div>
