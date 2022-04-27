@@ -13,13 +13,15 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  overflow: hidden;
+
 }
 
 .co2_graph_tg {
   height: 50vh;
   background-color: yellow;
   border-radius: 2rem;
-  margin: 2.6rem 0 3rem;
+  margin: 1rem 0 3rem;
 }
 @media screen and (min-width: 600px) {
   .co2_main_tg h1,
