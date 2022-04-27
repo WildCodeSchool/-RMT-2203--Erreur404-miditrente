@@ -1,29 +1,22 @@
 import React, { useState } from "react";
+import environnement from "../assets/environnement.png";
+import environnementNew from "../assets/environnement_new.png";
 
 function Actions({ data }) {
   const [likes, setLikes] = useState(data.likes);
   const [buttonActive, setButtonActive] = useState(true);
-  const [whyengaged, setWhyEngaged] = useState("Pourquoi s'engager ?");
-
-  const handleClickWhy = () => {
-    if (!buttonActive && whyengaged === data.explication) {
-      setWhyEngaged("Merci de contribuer au sauvetage de notre planète");
-    } else if (buttonActive && whyengaged === data.explication) {
-      setWhyEngaged("Pourquoi s'engager ?");
-    } else {
-      setWhyEngaged(data.explication);
-    }
-  };
+  const [whyengaged, setWhyEngaged] = useState(true);
+  const [msg, setMsg] = useState("Pourquoi s'engager ?");
 
   const handleClick = () => {
-    setButtonActive(!buttonActive);
     if (buttonActive === true) {
       setLikes((like) => like + 1);
-      setWhyEngaged("Merci de contribuer au sauvetage de notre planète");
+      setMsg("Merci de contribuer au sauvetage de notre planète");
     } else {
       setLikes((like) => like - 1);
-      setWhyEngaged("Pourquoi s'engager ?");
+      setMsg("Pourquoi s'engager ?");
     }
+    setButtonActive(!buttonActive);
   };
 
   return (
@@ -37,16 +30,33 @@ function Actions({ data }) {
           }
           onClick={handleClick}
         >
-          {buttonActive ? "personnes engagées" : "Je m'engage"}
-          <span> ♥ {likes}</span>
+          {buttonActive ? (
+            <div className="actions_div_tg">
+              <img
+                src={environnement}
+                alt="environnement"
+                className="actions_engagement_like_button_tg"
+              />
+              {likes}
+            </div>
+          ) : (
+            <div className="actions_div_tg">
+              <img
+                src={environnementNew}
+                alt="environnementNew"
+                className="actions_engagement_like_button_tg"
+              />
+              Vous et {likes - 1} autres personnes engagées
+            </div>
+          )}
         </button>
       </section>
       <button
         type="button"
         className="actions_engagementExplanation_tg"
-        onClick={handleClickWhy}
+        onClick={() => setWhyEngaged(!whyengaged)}
       >
-        {whyengaged}
+        {whyengaged ? msg : data.explication}
       </button>
     </div>
   );
