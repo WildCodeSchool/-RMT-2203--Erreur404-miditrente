@@ -1,13 +1,13 @@
-function Explication({ explicationData }) {
+function Explication({ data }) {
   return (
     <section className="explication_section_tg">
       <h2 className="explication_title">
-        Explication de {explicationData.sujet}
+        Explication de {data.sujet}
       </h2>
 
       <article>
-        <h3>{explicationData.title}</h3>
-        <p> {explicationData.paragraph} </p>
+        <h3>{data.title}</h3>
+        <p> {data.paragraph} </p>
       </article>
     </section>
   );
