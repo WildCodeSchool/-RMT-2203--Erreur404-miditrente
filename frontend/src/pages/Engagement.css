@@ -64,6 +64,11 @@
   transition: ease-out 2s;
 }
 
+.actions_bouton_tg * {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
 .actions_new_bouton_tg {
   border: 0;
   background-color: var(--light);
@@ -75,10 +80,15 @@
   transition: ease-out 2s;
 }
 
-.actions_container_tg span {
-  font-size: 1.5rem;
-  text-align: center;
-  background-color: inherit;
+.actions_new_bouton_tg * {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.actions_div_tg { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .actions_engagementExplanation_tg {
@@ -89,16 +99,28 @@
   border-radius: 0 0 0.8rem 0.8rem;
 }
 
+.actions_likeButton_tg{
+  width: 20px;
+  margin-right: 10px;
+  transition: all 0.25s ease-in-out;
+}
+
+.actions_likeButton_tg:hover, .actions_likeButton_tg:active  {
+  transform: scale(1.5);
+}
+
+.actions_bouton_p_tg{
+  margin: 0.2rem 0 0;
+}
+.filter_main_tg {
+  display: flex;
+  width: 93%;
+}
+
 .filter_main_tg * {
   background-color: var(--light);
   color: var(--dark);
-}
-
-.actions_engagement_like_button_tg{
-  width: 20px;
-  background-color: white;
-}
-
-.actions_div_tg {
-  background-color: white;
+  border-radius: 0.35rem;
+  margin: 0.5rem;
+  padding: 0.25rem;
 }

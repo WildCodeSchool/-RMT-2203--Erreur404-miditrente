@@ -35,18 +35,20 @@ function Actions({ data }) {
               <img
                 src={environnement}
                 alt="environnement"
-                className="actions_engagement_like_button_tg"
+                className="actions_likeButton_tg"
               />
-              {likes}
+              <p className="actions_bouton_p_tg">{likes} personnes engagées </p>
             </div>
           ) : (
             <div className="actions_div_tg">
               <img
                 src={environnementNew}
                 alt="environnementNew"
-                className="actions_engagement_like_button_tg"
+                className="actions_likeButton_tg"
               />
-              Vous et {likes - 1} autres personnes engagées
+              <p className="actions_bouton_p_tg">
+                Vous et {likes - 1} autres personnes engagées
+              </p>
             </div>
           )}
         </button>

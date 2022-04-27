@@ -8,6 +8,7 @@ function Filter({ value, handleValue }) {
           type="text"
           id="search"
           value={value}
+          placeholder="Rechercher"
           className="filter_input_tg"
           onChange={(event) => handleValue(event.target.value)}
         />
