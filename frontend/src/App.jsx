@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
-
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Co2 from "./pages/Co2";
@@ -10,6 +8,7 @@ import Fonte from "./pages/Fonte";
 import Info from "./pages/Info";
 import Engagement from "./pages/Engagement";
 import Nav from "./components/Nav";
+import Err404 from "./pages/Err404";
 
 function App() {
   return (
@@ -23,6 +22,7 @@ function App() {
           <Route path="/Fonte" element={<Fonte />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Engagement" element={<Engagement />} />
+          <Route path="*" element={<Err404 />} />
         </Routes>
       </div>
     </Router>
