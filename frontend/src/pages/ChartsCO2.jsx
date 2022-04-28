@@ -20,7 +20,12 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+// constantes de données, api distante et copie locale
+const apiOnline = "https://global-warming.org/api/co2-api";
+const apiLocale = "./datasets/co2.json";
+// fin des constantes de données
 
+// constante de titrage du graphique
 const options = {
   responsive: true,
   plugins: {
@@ -29,7 +34,7 @@ const options = {
     },
     title: {
       display: true,
-      text: `Fonte des glaces du Cercle Polaire`, // ajouter titre dynamique du graphique complet (date in:out)
+      text: ``, // titre par défaut, remplacé via prepaConfig
     },
   },
 };
@@ -39,48 +44,70 @@ function ChartsCO2() {
     labels: [],
     datasets: [
       {
-        label: "Ice Extent", // ajouter titre dynamique du premier graphique
+        label: "Valeurs quotidiennes (cycle)", // titre du premier graphique
         data: [],
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(136, 78, 160,0.8)",
+        backgroundColor: "rgba(136, 78, 160, 0.8)",
       },
       {
-        label: "Ice Area", // ajouter titre dynamique du second graphique
+        label: "Tendance moyenne (évolution)", // titre du second graphique
         data: [],
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgba(52,73,94, 0.8)", // "rgb(93, 109, 126)",
+        backgroundColor: "rgba(52, 73, 94, 0.8)",
       },
     ],
   });
   const prepaConfig = (data) => {
     options.plugins.title.text = `Concentration de Dioxyde de Carbone dans l'atmosphère (de ${
-      data[0].day
-    } à ${data[data.length - 1].day})`;
+      data[0].year
+    } à ${data[data.length - 1].year})`;
   };
 
   const prepareDataSet = (data) => {
-    /** Récupération du jeu dde dates */
+    /** Récupération du jeu de dates */
     const dataSetProv = { ...dataSet };
     data.forEach((el) => {
-      dataSetProv.labels.push(el.day);
-      // dataSetProv.datasets[0].data.push(el.extent);
-      // dataSetProv.datasets[1].data.push(el.area);
+      dataSetProv.labels.push(el.year);
+      dataSetProv.datasets[0].data.push(el.cycle);
+      dataSetProv.datasets[1].data.push(el.trend);
     });
+    // data.forEach((el) => {
+    //   dataSetProv.labels.push(el.year);
+
+    // });
     setDataSet(dataSetProv);
   };
-  useEffect(() => {
-    fetch("https://global-warming.org/api/co2-api")
+  // fetch des données online. En cas d'erreur, fetch des données locales.
+  // const getStaticData = (url, callback) => {
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       prepareDataSet(data.result);
+  //       prepaConfig(data.result);
+  //     })
+  //     // ternaire de fetch des données locales en cas d'erreur
+  //     .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
+  // };
+  const getStaticData = (url, callback) => {
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        prepareDataSet(data.result);
-        prepaConfig(data.result);
-      });
+        prepareDataSet(data.co2);
+        prepaConfig(data.co2);
+      })
+      // ternaire de fetch des données locales en cas d'erreur
+      .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
+  };
+
+  useEffect(() => {
+    getStaticData(apiOnline, getStaticData);
   }, []);
 
   return (
-    <div>
+    // affichage du composant graphique
+    <div className="graph_render_dd">
       {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
-      <p>text</p>
+      <p className="CetteDivDoitDisparaitre_dd">ici le CO2</p>
     </div>
   );
 }
