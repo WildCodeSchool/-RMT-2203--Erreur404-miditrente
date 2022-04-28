@@ -47,7 +47,8 @@ const options = {
     y: {
       // configuration de l'axe vertical
       ticks: {
-        callback: function (value, index, ticks) {
+        callback: function (value) {
+          //  callback: function (value, index, ticks) {
           return `${value}`;
         },
       },
@@ -78,7 +79,7 @@ function ChartsCO2() {
         label: "Valeurs quotidiennes (cycle)", // titre du premier graphique
         data: [],
         pointStyle: "dash",
-        radius: 1,
+        radius: 0.1,
         borderColor: "rgba(136, 78, 160,0.8)",
         backgroundColor: "rgba(136, 78, 160, 0.8)",
       },

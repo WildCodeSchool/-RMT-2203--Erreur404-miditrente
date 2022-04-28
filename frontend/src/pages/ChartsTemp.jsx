@@ -47,7 +47,8 @@ const options = {
     y: {
       // configuration de l'axe vertical
       ticks: {
-        callback: function (value, index, ticks) {
+        callback: function (value) {
+          // callback: function (value, index, ticks) {
           return `${value} °C`;
         },
       },

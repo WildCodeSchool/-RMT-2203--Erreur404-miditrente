@@ -46,7 +46,8 @@ const options = {
     y: {
       // configuration de l'axe vertical
       ticks: {
-        callback: function (value, index, ticks) {
+        callback: function (value) {
+          // callback: function (value, index, ticks) {
           return `${value}`;
         },
       },
@@ -77,7 +78,7 @@ function ChartsIceExtent() {
       {
         label: "Ice Extent", // titre du premier graphique
         data: [],
-        //tension 0.5,
+        // tension 0.5,
         borderColor: "rgb(47, 73, 239)", // "rgb(255, 99, 132)",
         backgroundColor: "rgba(47, 73, 239, 0.8)", // "rgba(255, 99, 132, 0.5)",
       },
