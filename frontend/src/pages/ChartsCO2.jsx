@@ -31,34 +31,33 @@ const options = {
   scales: {
     x: {
       // configuration de l'axe horizontal
+      // ticks: {
+      //   // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+      //   callback: function (val, index) {
+      //     // affichage d'une année, une colonne sur deux.
+      //     return index % 2 === 0 ? this.getLabelForValue(val) : "";
+      //   },
+      // },
+      display: true,
+      title: {
+        display: false,
+        text: "Année",
+      },
+    },
+    y: {
+      // configuration de l'axe vertical
       ticks: {
-        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-        callback: function (val, index) {
-          // affichage d'une année, une colonne sur deux.
-          return index % 2 === 0 ? this.getLabelForValue(val) : "";
+        callback: function (value, index, ticks) {
+          return `${value}`;
         },
       },
       display: true,
       title: {
+        // titre de l'axe vertical
         display: true,
-        text: "Année",
+        text: `Concentration de CO\u2082 en ppm`,
       },
     },
-    // y: {
-    //   // configuration de l'axe vertical
-    //   ticks: {
-    //     callback: function (value, index, ticks) {
-    //       console.warn(index, ticks);
-    //       return `${value} °C`;
-    //     },
-    //   },
-    //   display: true,
-    //   title: {
-    //     // titre de l'axe vertical
-    //     display: true,
-    //     text: "Température moyenne",
-    //   },
-    // },
   },
   plugins: {
     legend: {
@@ -78,12 +77,15 @@ function ChartsCO2() {
       {
         label: "Valeurs quotidiennes (cycle)", // titre du premier graphique
         data: [],
+        pointStyle: "dash",
+        radius: 1,
         borderColor: "rgba(136, 78, 160,0.8)",
         backgroundColor: "rgba(136, 78, 160, 0.8)",
       },
       {
         label: "Tendance moyenne (évolution)", // titre du second graphique
         data: [],
+        pointStyle: "dash",
         borderColor: "rgba(52,73,94, 0.8)", // "rgb(93, 109, 126)",
         backgroundColor: "rgba(52, 73, 94, 0.8)",
       },
@@ -103,23 +105,9 @@ function ChartsCO2() {
       dataSetProv.datasets[0].data.push(el.cycle);
       dataSetProv.datasets[1].data.push(el.trend);
     });
-    // data.forEach((el) => {
-    //   dataSetProv.labels.push(el.year);
-
-    // });
     setDataSet(dataSetProv);
   };
-  // fetch des données online. En cas d'erreur, fetch des données locales.
-  // const getStaticData = (url, callback) => {
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       prepareDataSet(data.result);
-  //       prepaConfig(data.result);
-  //     })
-  //     // ternaire de fetch des données locales en cas d'erreur
-  //     .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
-  // };
+
   const getStaticData = (url, callback) => {
     fetch(url)
       .then((res) => res.json())
@@ -134,12 +122,12 @@ function ChartsCO2() {
   useEffect(() => {
     getStaticData(apiOnline, getStaticData);
   }, []);
-
+  const CO2 = "CO\u2082";
   return (
     // affichage du composant graphique
     <div className="graph_render_dd">
       {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
-      <p className="CetteDivDoitDisparaitre_dd">ici le CO2</p>
+      <p className="CetteDivDoitDisparaitre_dd">parlons {CO2}</p>
     </div>
   );
 }

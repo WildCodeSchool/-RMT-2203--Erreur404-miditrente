@@ -40,7 +40,7 @@ const options = {
       },
       display: true,
       title: {
-        display: true,
+        display: false,
         text: "Année",
       },
     },
@@ -48,7 +48,6 @@ const options = {
       // configuration de l'axe vertical
       ticks: {
         callback: function (value, index, ticks) {
-          console.warn(index, ticks);
           return `${value} °C`;
         },
       },
@@ -56,7 +55,7 @@ const options = {
       title: {
         // titre de l'axe vertical
         display: true,
-        text: "Température moyenne",
+        text: "Température moyenne en °C",
       },
     },
   },
@@ -78,7 +77,9 @@ function ChartsTemp() {
       {
         label: "Température", // aka Station dans le set de données
         data: [],
-        borderColor: "rgba(255, 99, 132, 0.2)",
+        borderWidth: 1,
+        radius: 1,
+        borderColor: "rgba(255, 99, 132, 0.5)",
         backgroundColor: "rgba(255, 99, 132, 0.8)",
         color: "rgb(1, 99, 132)",
       },
@@ -107,7 +108,7 @@ function ChartsTemp() {
         prepareDataSet(data.result);
         prepaConfig(data.result);
       })
-      // ternaire de fetch des données locales en cas d'erreur
+      // ternaire de fetch dees données locales en cas d'erreur
       .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
   };
 
@@ -119,7 +120,7 @@ function ChartsTemp() {
     // affichage du composant graphique
     <div className="graph_render_dd">
       {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
-      <p>text</p>
+      <p>Parlons température...</p>
     </div>
   );
 }
