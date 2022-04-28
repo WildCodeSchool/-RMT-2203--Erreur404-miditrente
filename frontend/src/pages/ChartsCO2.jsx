@@ -28,6 +28,38 @@ const apiLocale = "./datasets/co2.json";
 // constante de titrage du graphique
 const options = {
   responsive: true,
+  scales: {
+    x: {
+      // configuration de l'axe horizontal
+      ticks: {
+        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+        callback: function (val, index) {
+          // affichage d'une année, une colonne sur deux.
+          return index % 2 === 0 ? this.getLabelForValue(val) : "";
+        },
+      },
+      display: true,
+      title: {
+        display: true,
+        text: "Année",
+      },
+    },
+    // y: {
+    //   // configuration de l'axe vertical
+    //   ticks: {
+    //     callback: function (value, index, ticks) {
+    //       console.warn(index, ticks);
+    //       return `${value} °C`;
+    //     },
+    //   },
+    //   display: true,
+    //   title: {
+    //     // titre de l'axe vertical
+    //     display: true,
+    //     text: "Température moyenne",
+    //   },
+    // },
+  },
   plugins: {
     legend: {
       position: "top",

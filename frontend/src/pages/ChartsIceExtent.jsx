@@ -91,7 +91,7 @@ function ChartsIceExtent() {
   });
   const prepaConfig = (data) => {
     // légendage
-    // 2exp : &sup2;
+    // 2exp :&sup2;
     options.plugins.title.text = `Fonte des glaces du Cercle Polaire (de ${
       data[0].year
     } à ${data[data.length - 1].year})`;
