@@ -1,0 +1,44 @@
+.timer_clock_qb {
+  margin-top: 8rem;
+  display: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 22rem;
+  width: 22rem;
+  border-radius: 11rem;
+  color: rgb(255, 000, 000);
+}
+
+.timer_paragrapheTop_qb {
+  position: relative;
+  height: 6rem;
+  margin-top: -9rem;
+  color: white;
+}
+
+.timer_center_qb {
+  display: flex;
+  justify-content: center;
+}
+
+.p_timer_qb {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0;
+  color: red;
+}
+
+small {
+  font-size: 1rem;
+}
+
+.timer_sup_qb {
+  margin-bottom: 15rem;
+  position: absolute;
+}
+
+.timer_parent_qb {
+  position: relative;
+}
