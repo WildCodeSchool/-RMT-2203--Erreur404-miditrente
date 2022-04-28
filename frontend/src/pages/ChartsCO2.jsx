@@ -23,15 +23,7 @@ ChartJS.register(
   Legend
 );
 
-/**
- *  initialisation des constantes importées
- */
-// const apiOnline = reglages.apiOnline;
-// const apiLocale = reglages.apiLocale;
-// const options = reglages.options;
-// const dataModel = reglages.dataModel;
 const CO2 = "CO\u2082";
-// fin des constantes de données
 
 function ChartsCO2() {
   const [dataSet, setDataSet] = useState(reglages.dataModel);
