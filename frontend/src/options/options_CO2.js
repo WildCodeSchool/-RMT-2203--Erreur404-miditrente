@@ -46,6 +46,9 @@ const options = {
   },
 };
 
+/**
+ *  réglages des axes du tableau
+ */
 const dataModel = {
   labels: [],
   datasets: [
@@ -67,4 +70,9 @@ const dataModel = {
   ],
 };
 
-export default options;
+const apiOnline = "https://global-warming.org/api/co2-api";
+const apiLocale = "./datasets/co2.json";
+
+const reglages = { options, dataModel, apiOnline, apiLocale };
+
+export default reglages;

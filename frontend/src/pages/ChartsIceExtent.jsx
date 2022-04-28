@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import options from "../options/options_iceExtent";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -12,6 +11,8 @@ import {
   Legend,
 } from "chart.js";
 
+import reglages from "../options/options_iceExtent";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,43 +22,20 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-// constantes de données, api distante et copie locale
-const apiOnline = "https://global-warming.org/api/arctic-api";
-const apiLocale = "./datasets/arcticExtent.json";
-// fin des constantes de données
-
-/**
- *  réglages des axes du tableau
- */
-const dataModel = {
-  labels: [],
-  datasets: [
-    {
-      label: "Ice Extent", // titre du premier graphique
-      data: [],
-      // tension 0.5,
-      borderColor: "rgb(47, 73, 239)", // "rgb(255, 99, 132)",
-      backgroundColor: "rgba(47, 73, 239, 0.8)", // "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      label: "Ice Area", // titre du second graphique
-      data: [],
-      // tension: 0.5,
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.8)",
-    },
-  ],
-};
 
 function ChartsIceExtent() {
-  const [dataSet, setDataSet] = useState(dataModel);
+  const [dataSet, setDataSet] = useState(reglages.dataModel);
   const prepaConfig = (data) => {
     // légendage
-    options.plugins.title.text = `Fonte des glaces du Cercle Polaire (de ${
+    reglages.options.plugins.title.text = `Fonte des glaces du Cercle Polaire (de ${
       data[0].year
     } à ${data[data.length - 1].year})`;
   };
 
+  /**
+   * préparation des données de l'API
+   * @param {array} data
+   */
   const prepareDataSet = (data) => {
     /** Récupération du jeu d'année */
     const dataSetProv = { ...dataSet };
@@ -68,7 +46,13 @@ function ChartsIceExtent() {
     });
     setDataSet(dataSetProv);
   };
-  // fetch des données online. En cas d'erreur, fetch des données locales.
+
+  /**
+   * fetch des données de l'API
+   * En cas d'erreur, lecture du json local
+   * @param {api} url
+   * @param {fonction} callback
+   */
   const getStaticData = (url, callback) => {
     fetch(url)
       .then((res) => res.json())
@@ -77,17 +61,20 @@ function ChartsIceExtent() {
         prepaConfig(data.result);
       })
       // ternaire de fetch des données locales en cas d'erreur
-      .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
+      .catch((err) =>
+        callback ? callback(reglages.apiLocale) : console.error(err)
+      );
   };
 
   useEffect(() => {
-    getStaticData(apiOnline, getStaticData);
+    getStaticData(reglages.apiOnline, getStaticData);
   }, []);
-
   return (
     // affichage du composant graphique
     <div className="graph_render_dd">
-      {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
+      {dataSet.labels.length > 0 && (
+        <Line data={dataSet} options={reglages.options} />
+      )}
       <div className="explications_ice_dd">
         <p>
           Ice Extent et Ice Area sont deux mesures différentes de la surface de

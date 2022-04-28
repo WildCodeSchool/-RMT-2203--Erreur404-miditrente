@@ -46,4 +46,32 @@ const options = {
   },
 };
 
-export default options;
+/**
+ *  réglages des axes du tableau
+ */
+const dataModel = {
+  labels: [],
+  datasets: [
+    {
+      label: "Ice Extent", // titre du premier graphique
+      data: [],
+      // tension 0.5,
+      borderColor: "rgb(47, 73, 239)", // "rgb(255, 99, 132)",
+      backgroundColor: "rgba(47, 73, 239, 0.8)", // "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      label: "Ice Area", // titre du second graphique
+      data: [],
+      // tension: 0.5,
+      borderColor: "rgb(53, 162, 235)",
+      backgroundColor: "rgba(53, 162, 235, 0.8)",
+    },
+  ],
+};
+
+const apiOnline = "https://global-warming.org/api/arctic-api";
+const apiLocale = "./datasets/arcticExtent.json";
+
+const reglages = { options, dataModel, apiOnline, apiLocale };
+
+export default reglages;

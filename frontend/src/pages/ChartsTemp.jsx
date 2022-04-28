@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import options from "../options/options_temperature";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -12,6 +11,8 @@ import {
   Legend,
 } from "chart.js";
 
+import reglages from "../options/options_temperature";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,37 +22,20 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-// constantes de données, api distante et copie locale
-const apiOnline = "https://global-warming.org/api/temperature-api";
-const apiLocale = "./datasets/temperature.json";
-// fin des constantes de données
-
-/**
- *  réglages des axes du tableau
- */
-const dataModel = {
-  labels: [],
-  datasets: [
-    {
-      label: "Température", // aka Station dans le set de données
-      data: [],
-      borderWidth: 1,
-      radius: 1,
-      borderColor: "rgba(255, 99, 132, 0.5)",
-      backgroundColor: "rgba(255, 99, 132, 0.8)",
-      color: "rgb(1, 99, 132)",
-    },
-  ],
-};
 
 function ChartsTemp() {
-  const [dataSet, setDataSet] = useState(dataModel);
+  const [dataSet, setDataSet] = useState(reglages.dataModel);
   const prepaConfig = (data) => {
-    options.plugins.title.text = `Estimation de l'évolution de la température moyenne au sol (de ${Math.round(
+    // légendage
+    reglages.options.plugins.title.text = `Estimation de l'évolution de la température moyenne au sol (de ${Math.round(
       data[0].time
     )} à ${Math.round(data[data.length - 1].time)})`;
   };
 
+  /**
+   * préparation des données de l'API
+   * @param {array} data
+   */
   const prepareDataSet = (data) => {
     /** Récupération du jeu de dates */
     const dataSetProv = { ...dataSet };
@@ -61,7 +45,13 @@ function ChartsTemp() {
     });
     setDataSet(dataSetProv);
   };
-  // fetch des données online. En cas d'erreur, fetch des données locales.
+
+  /**
+   * fetch des données de l'API
+   * En cas d'erreur, lecture du json local
+   * @param {api} url
+   * @param {fonction} callback
+   */
   const getStaticData = (url, callback) => {
     fetch(url)
       .then((res) => res.json())
@@ -70,21 +60,22 @@ function ChartsTemp() {
         prepaConfig(data.result);
       })
       // ternaire de fetch dees données locales en cas d'erreur
-      .catch((err) => (callback ? callback(apiLocale) : console.error(err)));
+      .catch((err) =>
+        callback ? callback(reglages.apiLocale) : console.error(err)
+      );
   };
 
   useEffect(() => {
-    getStaticData(apiOnline, getStaticData);
+    getStaticData(reglages.apiOnline, getStaticData);
   }, []);
-
   return (
     // affichage du composant graphique
     <div className="graph_render_dd">
-      {dataSet.labels.length > 0 && <Line data={dataSet} options={options} />}
+      {dataSet.labels.length > 0 && (
+        <Line data={dataSet} options={reglages.options} />
+      )}
       <p>Parlons température...</p>
     </div>
   );
 }
 export default ChartsTemp;
-
-// régler la hauteur du graph pour mobilefirst

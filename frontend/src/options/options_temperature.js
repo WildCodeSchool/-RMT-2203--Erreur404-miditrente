@@ -46,4 +46,27 @@ const options = {
   },
 };
 
-export default options;
+/**
+ *  réglages des axes du tableau
+ */
+const dataModel = {
+  labels: [],
+  datasets: [
+    {
+      label: "Température", // aka Station dans le set de données
+      data: [],
+      borderWidth: 1,
+      radius: 1,
+      borderColor: "rgba(255, 99, 132, 0.5)",
+      backgroundColor: "rgba(255, 99, 132, 0.8)",
+      color: "rgb(1, 99, 132)",
+    },
+  ],
+};
+
+const apiOnline = "https://global-warming.org/api/temperature-api";
+const apiLocale = "./datasets/temperature.json";
+
+const reglages = { options, dataModel, apiOnline, apiLocale };
+
+export default reglages;
