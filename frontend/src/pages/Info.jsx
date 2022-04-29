@@ -1,27 +1,33 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Info() {
   return (
     <main className="main">
-      <h1>Titre</h1>
-      <h2>A propos</h2>
+      <h1>A Propos</h1>
+      <h2>Le rechauffement climatique</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut
+        Le changement climatique est l'un des plus grand challenge de l'humanité
+        pour les années à venir :
       </p>
       <p>
-        LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPUSCING ELIT, SED DO EIUSMOD
-        EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD
-        VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT.
+        Hausse des temperatures, fonte des glaciers, multiplication des
+        sécheresses, innondations, sont autant de signes que le changement
+        climatique est engagé. Les risques sont énormes pour la planète et les
+        générations futures, c'est pourquoi nous devons AGIR maintenant.
       </p>
+      <h3>Les causes</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Les changements climatiques auxquels nous commençons à assister sont
+        principalement dus à l'augmentation des concentrations de gaz à effet de
+        serre dans l'atmosphère. Ces gaz à effet de serre ont toujours existé
+        dans l'atmosphère de façon de naturelle. Mais depuis quelques années, le
+        plus dangereux des gaz à effet de serre (le CO2) a connu une
+        augmentation fulgurante dont l'origine est loin d'être naturelle. Les
+        activités humaines sont aujourd'hui la principale cause de
+        l'augmentation de ce phénomène : les industries, les transports,
+        l'agriculture, et la production d'énergie en sont les principales
+        causes.
       </p>
+      <p />
     </main>
   );
 }

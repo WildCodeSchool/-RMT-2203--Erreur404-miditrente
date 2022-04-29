@@ -74,7 +74,13 @@ function ChartsTemp() {
       {dataSet.labels.length > 0 && (
         <Line data={dataSet} options={reglages.options} />
       )}
-      <p>Parlons température...</p>
+      <p>
+        La température présentée correspond à la moyenne mensuelle mesurée au
+        sol. Chaque mesure est comparée à la moyenne de l&apos;ensemble des
+        mesures depuis 1880, fixée par convention à 0°C. Une différence de 1°C
+        signifie une température supérieure de 1°C à la moyenne des mesures
+        depuis 240 ans.
+      </p>
     </div>
   );
 }
