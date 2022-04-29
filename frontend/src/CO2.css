@@ -17,15 +17,29 @@
 
 }
 
+.co2_main_tg * {
+  padding: 0 1.5rem;
+
+}
+.co2_main_tg h1 {
+  margin-top : 7rem
+}
+
 .co2_graph_tg {
   height: 50vh;
   background-color: yellow;
   border-radius: 2rem;
   margin: 1rem 0 3rem;
 }
+
+.explication_section_tg{
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 600px) {
   .co2_main_tg h1,
   h2 {
     text-align: center;
   }
 }
+

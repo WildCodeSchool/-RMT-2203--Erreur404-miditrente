@@ -31,7 +31,7 @@ const options = {
       title: {
         // titre de l'axe vertical
         display: true,
-        text: "Température moyenne en °C",
+        text: "Différence avec la température moyenne en °C",
       },
     },
   },

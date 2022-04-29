@@ -6,13 +6,13 @@ const options = {
   scales: {
     x: {
       // configuration de l'axe horizontal
-      // ticks: {
-      //   // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-      //   callback: function (val, index) {
-      //     // affichage d'une année, une colonne sur deux.
-      //     return index % 2 === 0 ? this.getLabelForValue(val) : "";
-      //   },
-      // },
+      ticks: {
+        // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+        callback: function (val, index) {
+          // affichage d'une année, une colonne sur deux.
+          return index % 3 === 0 ? this.getLabelForValue(val) : "";
+        },
+      },
       display: true,
       title: {
         display: false,

@@ -23,8 +23,6 @@ ChartJS.register(
   Legend
 );
 
-const CO2 = "CO\u2082";
-
 function ChartsCO2() {
   const [dataSet, setDataSet] = useState(reglages.dataModel);
   const prepaConfig = (data) => {
@@ -77,7 +75,6 @@ function ChartsCO2() {
       {dataSet.labels.length > 0 && (
         <Line data={dataSet} options={reglages.options} />
       )}
-      <p className="CetteDivDoitDisparaitre_dd">parlons {CO2}</p>
     </div>
   );
 }

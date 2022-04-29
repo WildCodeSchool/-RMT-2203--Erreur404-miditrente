@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.engagement_h1_tg{
+  margin-top: 7rem;
+}
+
 .actions_main_tg {
   display: flex;
   flex-direction: column;
@@ -82,7 +86,7 @@
 }
 
 .actions_engagementExplanation_tg {
-  background-color: blue;
+  background-color: grey;
   border: solid white 1px;
   padding: 0.7rem;
   width: 93%;
@@ -101,4 +105,19 @@
 
 .actions_div_tg {
   background-color: white;
+}
+
+
+@media screen and (min-width:768px) {
+
+  .actions_main_tg{
+    display: flex;
+    width: 30%;
+  }
+
+  .actions_new_main_tg{
+    display: flex;
+    width: 30%;
+  }
+
 }

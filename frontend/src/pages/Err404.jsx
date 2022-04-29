@@ -22,10 +22,10 @@ export default function Err404() {
           <img src={error} className="err404_error_qb" alt="fin du monde" />
           <img src={chiffre} className="err404_chiffre_qb" alt="chiffre 4" />
         </div>
-        <p>Do you want save the earth ? click here !</p>
+        <p>Do you want to save the Earth ? Click here !</p>
         <Link to="/">
           <button type="submit" className="err404_button_404_qb">
-            save the world
+            Save the world
           </button>
         </Link>
       </div>
