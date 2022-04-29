@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Co2 from "./pages/Co2";
-import Fonte from "./pages/Fonte";
+import ChartsIceExtent from "./pages/ChartsIceExtent";
+import ChartsTemp from "./pages/ChartsTemp";
+import ChartsCO2 from "./pages/ChartsCO2";
 import Info from "./pages/Info";
 import Engagement from "./pages/Engagement";
 import Nav from "./components/Nav";
@@ -18,8 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Info" element={<Info />} />
-          <Route path="/Co2" element={<Co2 />} />
-          <Route path="/Fonte" element={<Fonte />} />
+          <Route path="/ChartsCO2" element={<ChartsCO2 />} />
+          <Route path="/ChartsTemp" element={<ChartsTemp />} />
+          <Route path="/ChartsIceExtent" element={<ChartsIceExtent />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Engagement" element={<Engagement />} />
           <Route path="*" element={<Err404 />} />
