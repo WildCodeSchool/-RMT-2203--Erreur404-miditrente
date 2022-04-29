@@ -10,9 +10,9 @@ import "../CO2.css";
 function Co2() {
   return (
     <div className="co2_main_tg">
-      <h1 className="co2_firstchild_tg">Concentration de Co2</h1>
+      <h1 className="co2_firstchild_tg">Concentration de CO2</h1>
       <ChartsCO2 />
-      <h1>La courbe de temperature :</h1>
+      <h1>La courbe de température :</h1>
       <ChartsTemp />
       <h1>Fonte des glaces : </h1>
       <ChartsIceExtent />
