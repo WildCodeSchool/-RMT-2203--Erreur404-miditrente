@@ -1,4 +1,5 @@
 import "./contact.css";
+// eslint-disable-next-line import/no-unresolved
 import { useForm } from "react-hook-form";
 
 export default function Contact() {
@@ -14,7 +15,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="main_contact_qb">
+    <div className="contact_qb">
       <div className="form_qb">
         <h1>Contactez nous </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
