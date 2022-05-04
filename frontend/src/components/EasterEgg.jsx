@@ -1,57 +1,21 @@
 import React from "react";
 import "./EasterEgg.css";
-import notime from "../assets/notime.gif";
-import horloge from "../assets/horloge.gif";
-import horloge2 from "../assets/horloge2.gif";
+import easterEgg from "../datas/easteregg";
 
 function EasterEgg() {
   return (
     <div className="easterEgg_main_tg">
-      <img className="easterEgg_main_img" src={notime} alt="no time" />
-
-      <div className="set">
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
-        <img className="easterEgg_img" src={horloge} alt="horloge" />
-        <h1 className="easterEgg_title">midiTrente</h1>
-        <img
-          className="easterEgg_img correction"
-          src={horloge2}
-          alt="horloge2"
-        />
+      <div className="easterEgg_container_tg">
+        {easterEgg.map((img, index) => (
+          <div className={index % 2 === 0 ? "set" : "set2"}>
+            <img src={img.image} alt={img.alt} />
+            <img src={img.image2} alt={img.alt} className="correction" />
+            <h1>{img.titre}</h1>
+            <img src={img.image2} alt={img.alt} className="correction" />
+            <img src={img.image} alt={img.alt} />
+            <h1>{img.titre}</h1>
+          </div>
+        ))}
       </div>
     </div>
   );
