@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Actions from "../components/Actions";
 import Filter from "../components/Filter";
+import EasterEgg from "../components/EasterEgg";
 import engagementData from "../datas/engagement-data";
 
 import "./Engagement.css";
 
 function Engagement() {
   const [value, setValue] = useState("");
+  console.warn(value);
 
   return (
     <div className="engagement_main_tg">
@@ -20,6 +22,7 @@ function Engagement() {
         .map((data) => (
           <Actions data={data} />
         ))}
+      {value === "midiTrente" ? <EasterEgg /> : ""}
     </div>
   );
 }
