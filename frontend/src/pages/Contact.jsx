@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   /**
    * register permet d'enregistrer les informations de notre formulaire grâce au code :
-   * {...register("Nom-de-variable", { required: true })} dans les input ligne 63/74/85/97
+   * {...register("Nom-de-variable", { required: true })} dans les input ligne 85/97/108/120
    * { required: true } Permet d'obliger l'utilisateur à rentrer une valeur dans l'input
    */
   const {
