@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.engagement_h1_tg{
+.engagement_h1_tg {
   margin-top: 7rem;
 }
 
@@ -98,7 +98,7 @@
   color: var(--dark);
 }
 
-.actions_engagement_like_button_tg{
+.actions_engagement_like_button_tg {
   width: 20px;
   background-color: white;
 }
@@ -107,17 +107,14 @@
   background-color: white;
 }
 
-
-@media screen and (min-width:768px) {
-
-  .actions_main_tg{
+@media screen and (min-width: 768px) {
+  .actions_main_tg {
     display: flex;
     width: 30%;
   }
 
-  .actions_new_main_tg{
+  .actions_new_main_tg {
     display: flex;
     width: 30%;
   }
-
 }
