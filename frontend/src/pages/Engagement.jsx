@@ -8,7 +8,6 @@ import "./Engagement.css";
 
 function Engagement() {
   const [value, setValue] = useState("");
-  console.warn(value);
 
   return (
     <div className="engagement_main_tg">
