@@ -33,6 +33,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5rem 0;
+    font-weight: bold;
 }
 .set2{
     display: flex;
@@ -40,6 +41,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5rem 0;
+    font-weight: bold;
 }
 
 .set2 *{
@@ -49,20 +51,19 @@
     transition: ease-in-out 2s;
     color: red;
     margin : 2rem;
-    overflow: hidden;
 }
-.set h1:nth-child(6){
+.set h2:nth-child(6){
     left:70%;
     animation: animate 30s linear infinite;
 }
-.set2 h1:nth-child(6){
+.set2 h2:nth-child(6){
     left:40%;
     animation: animate 30s linear infinite;
 }
 
-.set2 h1:nth-child(3){
-    left:40%;
-    animation: animate 30s linear infinite;
+.set2 h2:nth-child(3){
+    left:30%;
+    animation: animate 15s linear infinite;
 }
 
 .set2 img:nth-child(1){
@@ -93,9 +94,9 @@
     left:20%;
     animation: animate 30s linear infinite;
 }
-.set h1:nth-child(3){
+.set h2:nth-child(3){
     left:40%;
-    animation: animate 30s linear infinite;
+    animation: animate 15s linear infinite;
     
 }.set img:nth-child(4){
     left:0%;
@@ -143,4 +144,24 @@
 .easterEgg_main_img{
    transition: ease-in-out 2s;
    z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+.easterEgg_container_tg{
+    display: inline;
+}
+.set img:nth-child(1n+2){
+    display: none;
+}
+.set h2:nth-child(2n +1){
+    display: none;
+}
+.set * {
+ width: 30%;
+}
+
+.set2 * {
+    width: 30%;
+}
+
 }
