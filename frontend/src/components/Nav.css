@@ -40,9 +40,10 @@
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
+
 .navbar_item_mt {
   line-height: 40px;
-  margin-left: 1rem;
+  margin-left: 1.2rem;
 }
 .navbar_item_mt:after {
   content: "";
@@ -55,7 +56,8 @@
   width: 100%;
   background: var(--light);
   transition: all ease-in-out 250ms;
-}
+ }
+
 
 .navbar_burger_mt {
   background: transparent;

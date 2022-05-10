@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "./err404.css";
 import error from "../assets/error.gif";
 import chiffre from "../assets/orange4.png";
@@ -22,6 +23,9 @@ export default function Err404() {
 
   return (
     <div className="err404_background_qb">
+      <Helmet>
+        <title> 3arth keeper | Error 404 </title>
+      </Helmet>
       <div className="err404_page_qb">
         <h1>Earth not found ! </h1>
         <div className="err404_earth_qb">

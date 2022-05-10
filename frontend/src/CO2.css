@@ -8,19 +8,20 @@
   --title-font-size: ;
   --text-font-size: ;
 }
+.co2_main_tg * {
+  padding: 0 1.5rem;
 
+}
 .co2_main_tg {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 3rem;
   overflow: hidden;
-}
 
-.co2_main_tg * {
-  padding: 0 1.5rem;
 }
 .co2_main_tg h1 {
-  margin-top: 7rem;
+  margin-top : 7rem
+
 }
 
 .co2_graph_tg {
@@ -29,14 +30,26 @@
   border-radius: 2rem;
   margin: 1rem 0 3rem;
 }
+.explications_ice_dd {
+  background-color: var(--dark);
+}
 
 .explication_section_tg {
   margin-top: 2rem;
+  width: 100%;
+    border: 0.9px solid white;
+    padding: 2rem;
+    justify-content: center;
+    white-space: pre-line;
+    text-align: center;
 }
-
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 768px) {
   .co2_main_tg h1,
   h2 {
     text-align: center;
+  }
+  .co2_main_tg * {
+    padding: 0 ;
+  
   }
 }
