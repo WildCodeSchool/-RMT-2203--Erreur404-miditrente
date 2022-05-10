@@ -21,7 +21,9 @@ span {
   font-family: 'Playfair Display', serif;
 
 }
-
+h6 {
+  color: white;
+}
 .engagement_main_tg {
   padding: 5rem 3rem;
   padding-bottom: 0;
