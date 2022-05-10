@@ -51,9 +51,9 @@ function FaqPage() {
     },
     {
       question:
-        "La limite à l'usage de l'eau douce a-t-elle un lien avec l'eau de mon robinet?",
+        "Le trou de la couche d'ozone, ça fait longteemps que c'est grave, non?",
       answer:
-        "La question relève de la quantité de consommation des ressources en eaux de ruissellement. ELle doit rester inférieure à 4000 km3/an. Mais cette limite a été atteinte en mai 2022.",
+        "Non, cette limite n'est pas encore atteinte, même si la couche d'ozone est déjà entamée",
       open: false,
     },
     {
