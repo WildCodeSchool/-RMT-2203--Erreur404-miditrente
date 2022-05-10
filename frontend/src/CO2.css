@@ -14,15 +14,13 @@
   flex-direction: column;
   padding: 2rem;
   overflow: hidden;
-
 }
 
 .co2_main_tg * {
   padding: 0 1.5rem;
-
 }
 .co2_main_tg h1 {
-  margin-top : 7rem
+  margin-top: 7rem;
 }
 
 .co2_graph_tg {
@@ -32,7 +30,7 @@
   margin: 1rem 0 3rem;
 }
 
-.explication_section_tg{
+.explication_section_tg {
   margin-top: 2rem;
 }
 
@@ -42,4 +40,3 @@
     text-align: center;
   }
 }
-

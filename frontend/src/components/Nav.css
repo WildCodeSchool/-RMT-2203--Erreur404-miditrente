@@ -34,7 +34,6 @@
 .navbar_links_mt {
   display: flex;
   padding: 0.5rem 2rem;
-
 }
 .navbar_link_mt {
   color: var(--light);
@@ -46,7 +45,7 @@
   margin-left: 1rem;
 }
 .navbar_item_mt:after {
-  content:"";
+  content: "";
   display: block;
   height: 1px;
   width: 0;
@@ -56,8 +55,7 @@
   width: 100%;
   background: var(--light);
   transition: all ease-in-out 250ms;
- }
-
+}
 
 .navbar_burger_mt {
   background: transparent;
@@ -162,4 +160,3 @@
     transform: rotate(-40deg);
   }
 }
-
