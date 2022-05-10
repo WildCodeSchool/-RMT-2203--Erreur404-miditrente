@@ -28,17 +28,17 @@ function FaqPage() {
     },
     {
       question: `C’est quoi le changement climatique?`,
-      answer: `On considère que de dépassement de certains seuils  en matière de volume émis ou extrait de l’environnement sont responsable de perturbations significatives de la température globale, notamment une variation de plus de 1 W/m2 du forçage radiatif.\nLe forçage radiatif, appliqué au réchauffement climatique, mesure la propension d’un facteur, comme par exemple la concentration en gaz à effet de serre, à perturber l’équilibre énergétique de la Terre`,
+      answer: `On considère que de dépassement de certains seuils  en matière de volume émis ou extrait de l’environnement sont responsable de perturbations significatives de la température globale, notamment une variation de plus de 1 W/m2 du forçage radiatif.\nLe forçage radiatif, appliqué au réchauffement climatique, mesure la propension d’un facteur, comme par exemple la concentration en gaz à effet de serre, à perturber l’équilibre énergétique de la Terre`,
       open: false,
     },
     {
       question: "C’est quoi l’érosion de la biodiversité?",
       answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
+        "On considère l taux d’extinction « normal » des espèces comme inférieur à dix espèces par an sur un million. Or, le taux actuel d’extinction planétaire serait cent à mille fois supérieur à l'échelle de la planète. Ces disparitions ont des impacts majeurs sur les écosystèmes et sur les fonctions qui ne sont plus remplies par les espèces disparues.",
       open: false,
     },
     {
-      question: `C'est quoi le "continent de plastique"`,
+      question: `Les perturbations globales du cycle de l’azote et du phosphore, c'est quoi?`,
       answer:
         "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
       open: false,
