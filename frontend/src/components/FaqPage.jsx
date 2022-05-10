@@ -57,10 +57,9 @@ function FaqPage() {
       open: false,
     },
     {
-      question:
-        "J'ai écrit des questions au hasard, est-ce que vous allez vous en rendre compte?",
+      question: "L'acidification des océans, c'est possible?",
       answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
+        "Malheureusement oui. Lorsque le taux moyen de saturation de l'eau de mer de surface en aragonite sera supérieur ou égal à 80% du niveau pré-industriel, cette limite sera dépassée.\nL’aragonite est un minéral composé de carbonate de calcium. Elle devient soluble dans l'océan au-delà d'une certaine acidité de l'eau (légèrement variable selon la température), c'est pourquoi elle est considérée comme un des traceurs et indicateurs de l'acidification des océans induite par les émissions anthropiques de CO2 notamment. Elle est à ce titre choisie comme variable de contrôle de l'acidification des océans par les auteurs du concept des limites planétaires en 2009",
       open: false,
     },
     {
