@@ -9,9 +9,9 @@ import "./Engagement.css";
 function Engagement() {
   const [value, setValue] = useState("");
   const [selection, setSelection] = useState(engagementData);
-  const categories = ["Tout", "Facile", "Intermediaire", "Expert"];
+  const categories = ["Tous", "Facile", "Intermediaire", "Expert"];
   const handleClick = (button) => {
-    if (button === "Tout") {
+    if (button === "Tous") {
       setSelection(engagementData);
       return;
     }
@@ -23,7 +23,10 @@ function Engagement() {
 
   return (
     <div className="engagement_main_tg">
-      <h1 className="engagement_h1_tg"> Agir maintenant </h1>
+      <h1 className="engagement_h1_tg">
+        Agir <span>maintenant</span>{" "}
+      </h1>
+      <h3> Vos engagements :</h3>
       <Button categories={categories} handleClick={handleClick} />
       <Filter value={value} handleValue={setValue} />
       {selection
