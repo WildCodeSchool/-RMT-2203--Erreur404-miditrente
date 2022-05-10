@@ -11,12 +11,11 @@ function Timer() {
   const [timerMinutes, setTimerMinutes] = useState();
   const [timerSecondes, setTimerSecondes] = useState();
 
-  let interval;
-
-  const startTimer = () => {
+  useEffect(() => {
+  
     const countDownDate = new Date("April 4, 2025").getTime(); // date de fin du timer
 
-    interval = setInterval(() => {
+    let interval = setInterval(() => {
       const now = new Date().getTime(); // date actuelle
 
       const distance = countDownDate - now; // calucule de la date d'echeance avec la date actuelle
@@ -42,11 +41,12 @@ function Timer() {
         setTimerSecondes(secondes);
       }
     });
-  };
 
-  useEffect(() => {
-    startTimer();
-  }); // permet le decompte
+    return ()=>{
+      clearInterval(interval)
+    }
+
+  },[]); // permet le decompte
 
   return (
     <div className="App">
