@@ -40,14 +40,13 @@ function FaqPage() {
     {
       question: `Les perturbations globales du cycle de l’azote et du phosphore, c'est quoi?`,
       answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
+        "La modification des cycles de l’azote et du phosphore contenu dans les sols résulte notamment de l’agriculture et de l’élevage intensifs. L’usage d’engrais et les déjections issues de l’élevage contribuent à perturber ces cycles indispensables au bon état des sols et des eaux. La limite était déjà atteinte pour l’azote en 2009.",
       open: false,
     },
     {
-      question:
-        "Je prends une douche par semaine pour économiser l'eau. J'ai bon?",
+      question: "À quoi fait référence la modification des usages des sols?",
       answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
+        "On considère cette limite dépassée lorsque plus de 15% de la surface de terres libres de glaces est convertie en terres agricoles.",
       open: false,
     },
     {
