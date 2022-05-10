@@ -7,6 +7,7 @@ import planetfaq from "../assets/planetfaq.png";
  *
  * @returns FAQ content
  */
+
 function FaqPage() {
   const [faqs, setFaqs] = useState([
     {
