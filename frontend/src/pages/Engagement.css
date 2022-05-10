@@ -27,7 +27,6 @@ span {
   align-items: center;
 }
 
-
 .engagement_h1_tg{
   margin-top: 5rem;
 }
@@ -46,7 +45,6 @@ span {
   color: white;
   transition: all 0.4s cubic-bezier(1,-0.16,.6,1.35);
 }
-
 .btn:not(:last-child){
   margin-right: 1rem;
 }
@@ -86,6 +84,7 @@ span {
 }
 .actions_container_tg {
   display: flex;
+  background-color: black;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -101,7 +100,6 @@ span {
   margin-bottom: 1rem;
     margin-top: 1rem;
 }
-
 .actions_bouton_tg {
   border: 0;
   background-color: var(--dark);
@@ -156,7 +154,6 @@ span {
   transition: all .3s ease-in-out;
     cursor: pointer;
     transform: scale(1.4);
-
 }
 .actions_div_tg {
   background-color: var(--dark);
@@ -166,7 +163,6 @@ span {
   flex-direction: column;
   align-items: center;
 }
-
 
 @media screen and (max-width:768px) {
   .engagement_main_tg {
@@ -194,4 +190,3 @@ span {
     width: 26vh;
   }
 }
-

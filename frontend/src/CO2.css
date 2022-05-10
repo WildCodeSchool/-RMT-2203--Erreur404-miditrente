@@ -40,7 +40,7 @@
     padding: 2rem;
     justify-content: center;
     white-space: pre-line;
-    text-align: center;
+    text-align: left;
 }
 @media screen and (max-width: 768px) {
   .co2_main_tg h1,

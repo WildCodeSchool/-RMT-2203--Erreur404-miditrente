@@ -33,7 +33,6 @@ function Engagement() {
       </h1>
       <h3> Vos engagements :</h3>
       <Button categories={categories} handleClick={handleClick} />
-
       <Filter value={value} handleValue={setValue} />
       {selection
         .filter((name) => name.text.includes(value))
