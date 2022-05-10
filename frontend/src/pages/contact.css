@@ -68,31 +68,31 @@
   cursor: pointer;
 }
 
-.contact_info_qb{
+.contact_info_qb {
   margin-top: 10rem;
   background-color: lightgray;
   width: 30rem;
   height: 39rem;
   text-align: center;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 .contact_info_qb * {
   background-color: lightgray;
 }
 
-.contact_info_qb> h2 {
+.contact_info_qb > h2 {
   border-radius: 20px;
   text-align: center;
 }
 
-.contact_texte_qb{
+.contact_texte_qb {
   font-size: 1.1rem;
   color: var(--dark);
   margin: 2rem;
 }
 
-.button_faq_qb{
+.button_faq_qb {
   width: 10rem;
   height: 8rem;
   background-image: url(../assets/planet-faq.png);
@@ -103,7 +103,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
   .contact_qb {
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@
     height: 39rem;
   }
 
-  .contact_info_qb{
+  .contact_info_qb {
     margin-top: 10rem;
     width: 25rem;
   }

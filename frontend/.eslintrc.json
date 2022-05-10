@@ -29,7 +29,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": 0,
     "object-shorthand": 0,
-    "func-names":"off"
+    "func-names": "off"
   },
   "settings": {
     "import/resolver": {
