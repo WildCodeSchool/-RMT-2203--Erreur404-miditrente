@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./err404.css";
 import error from "../assets/error.gif";
 import chiffre from "../assets/orange4.png";
