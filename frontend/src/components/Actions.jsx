@@ -20,44 +20,46 @@ function Actions({ data }) {
   };
 
   return (
-    <div className={buttonActive ? "actions_main_tg" : "actions_new_main_tg"}>
-      <section className="actions_container_tg">
-        <h3 className="actions_engagementType_tg">{data.text}</h3>
+    <div className="actions_mt">
+      <div className={buttonActive ? "actions_main_tg" : "actions_new_main_tg"}>
+        <section className="actions_container_tg">
+          <h3 className="actions_engagementType_tg">{data.text}</h3>
+          <button
+            type="button"
+            className={
+              buttonActive ? "actions_bouton_tg" : "actions_new_bouton_tg"
+            }
+            onClick={handleClick}
+          >
+            {buttonActive ? (
+              <div className="actions_div_tg">
+                <img
+                  src={environnement}
+                  alt="environnement"
+                  className="actions_engagement_like_button_tg"
+                />
+                {likes}
+              </div>
+            ) : (
+              <div className="actions_div_tg">
+                <img
+                  src={environnementNew}
+                  alt="environnementNew"
+                  className="actions_engagement_like_button_tg"
+                />
+                Vous et {likes - 1} autres personnes engagées
+              </div>
+            )}
+          </button>
+        </section>
         <button
           type="button"
-          className={
-            buttonActive ? "actions_bouton_tg" : "actions_new_bouton_tg"
-          }
-          onClick={handleClick}
+          className="actions_engagementExplanation_tg"
+          onClick={() => setWhyEngaged(!whyengaged)}
         >
-          {buttonActive ? (
-            <div className="actions_div_tg">
-              <img
-                src={environnement}
-                alt="environnement"
-                className="actions_engagement_like_button_tg"
-              />
-              {likes}
-            </div>
-          ) : (
-            <div className="actions_div_tg">
-              <img
-                src={environnementNew}
-                alt="environnementNew"
-                className="actions_engagement_like_button_tg"
-              />
-              Vous et {likes - 1} autres personnes engagées
-            </div>
-          )}
+          {whyengaged ? msg : data.explication}
         </button>
-      </section>
-      <button
-        type="button"
-        className="actions_engagementExplanation_tg"
-        onClick={() => setWhyEngaged(!whyengaged)}
-      >
-        {whyengaged ? msg : data.explication}
-      </button>
+      </div>
     </div>
   );
 }
