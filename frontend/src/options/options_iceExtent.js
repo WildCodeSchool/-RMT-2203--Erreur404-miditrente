@@ -70,7 +70,7 @@ const dataModel = {
 };
 
 const apiOnline = "https://global-warming.org/api/arctic-api";
-const apiLocale = "./datasets/arcticExtent.json";
+const apiLocale = "./datasets/iceExtent.json";
 
 const reglages = { options, dataModel, apiOnline, apiLocale };
 

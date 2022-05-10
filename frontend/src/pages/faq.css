@@ -17,8 +17,24 @@
   align-items: center;
 }
 
+.engagement_main_dd {
+  padding: 5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .engagement_h1_tg {
   margin-top: 7rem;
+}
+
+.actions_main_dd {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  transition: all 2s ease-in-out;
+  width: 60%;
 }
 
 .actions_main_tg {
@@ -37,6 +53,17 @@
   width: 100%;
 }
 
+.actions_container_dd {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 93%;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: var(--light);
+  margin-top: 2rem;
+}
+
 .actions_container_tg {
   display: flex;
   justify-content: center;
@@ -44,6 +71,17 @@
   align-items: center;
   width: 100%;
   margin-top: 2rem;
+}
+
+.actions_engagementType_dd {
+  color: var(--dark);
+  text-align: center;
+  padding: 0.7rem 0.7rem 0;
+  border-radius: 0.8rem 0 0 0;
+  width: 93%;
+  height: 57px;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 .actions_engagementType_tg {
@@ -85,6 +123,14 @@
   background-color: inherit;
 }
 
+.actions_engagementExplanation_dd {
+  background-color: lightgrey;
+  border: solid white 1px;
+  padding: 0.7rem;
+  width: 93%;
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
 .actions_engagementExplanation_tg {
   background-color: grey;
   border: solid white 1px;
@@ -97,12 +143,21 @@
   background-color: var(--light);
   color: var(--dark);
 }
+.actions_engagement_like_button_dd2 {
+  width: 50px;
+  transform: rotate(120deg);
+}
 
+.actions_engagement_like_button_dd {
+  width: 50px;
+}
 .actions_engagement_like_button_tg {
   width: 20px;
   background-color: white;
 }
-
+.actions_div_dd {
+  width: 50px;
+}
 .actions_div_tg {
   background-color: white;
 }
