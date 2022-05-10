@@ -53,7 +53,7 @@ function Nav() {
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
-            Foire Aux Questions
+            Agir maintenant
           </Link>
         </li>
         <li className="navbar_item_mt">
