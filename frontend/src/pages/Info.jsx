@@ -31,6 +31,7 @@ export default function Info() {
         industries, les transports, l&apos;agriculture, et la production
         d&apos;énergie en sont les principales causes.
       </p>
+      <p />
     </main>
   );
 }
