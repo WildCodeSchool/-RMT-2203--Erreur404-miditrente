@@ -51,9 +51,9 @@ function FaqPage() {
     },
     {
       question:
-        "J'ai voté écolo aux dernières élections, est-ce que ça va suffire?",
+        "La limite à l'usage de l'eau douce a-t-elle un lien avec l'eau de mon robinet?",
       answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
+        "La question relève de la quantité de consommation des ressources en eaux de ruissellement. ELle doit rester inférieure à 4000 km3/an. Mais cette limite a été atteinte en mai 2022.",
       open: false,
     },
     {
