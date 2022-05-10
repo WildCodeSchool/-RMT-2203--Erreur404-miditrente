@@ -11,13 +11,12 @@ import planetfaq from "../assets/planetfaq.png";
 function FaqPage() {
   const [faqs, setFaqs] = useState([
     {
-      question: "C'est quoi une limite planétaire ?",
-      answer:
-        "Les limites planétaires sont les seuils que l'humanité ne devrait pas dépasser pour ne pas compromettre les conditions favorables dans lesquelles elle a pu se développer et pour pouvoir durablement vivre dans un écosystème sûr, c’est-à-dire en évitant les modifications brutales et difficilement prévisibles de l'environnement planétaire.\nCe concept a été proposé par une équipe internationale de vingt-six chercheurs et publié en 2009. Il a depuis été mis à jour par des publications régulières.",
+      question: `C'est quoi le "jour du dépassement"?`,
+      answer: `Le jour du dépassement de la Terre (en anglais : Earth Overshoot Day) correspond à la date de l’année, calculée par l'ONG américaine Global Footprint Network, à partir de laquelle l’humanité est supposée avoir consommé l’ensemble des ressources que la planète est capable de régénérer en un an. Passé cette date, l’humanité puiserait donc de manière irréversible dans les réserves "non renouvelables" (à échelle de temps humaine) de la Terre.\nEn 2022, l'ONG a estimé cette date au 29 juillet. La date peut aussi être calculée par pays. En France, elle a été atteinte le 5 mai 2022. Cela signifie globalement qu'à ce rythme, la France aurait besoinde de 2,9 Terre(s) pour subvenir à ses besoins de l'année.`,
       open: false,
     },
     {
-      question: "Combien de limites planétaires existe-t-il ?",
+      question: "C'est quoi une limite planétaire?",
       answer:
         "Il existe neuf processus retenus comme limites, dont six sont déjà franchies:\n🔴 le changement climatique\n🔴 l’érosion de la biodiversité\n🔴 les perturbations globales du cycle de l’azote et du phosphore\n🔴 l’usage des sols\n🟢 l’acidification des océans\n🟢 la déplétion de la couche d’ozone\n🟢 les aérosols atmosphériques\n🔴 l’usage de l’eau douce (dernière limite franchie en 2022)\n🔴 les pollutions chimiques",
       open: false,
