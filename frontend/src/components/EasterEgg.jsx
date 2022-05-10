@@ -10,10 +10,10 @@ function EasterEgg() {
           <div className={index % 2 === 0 ? "set" : "set2"}>
             <img src={img.image} alt={img.alt} />
             <img src={img.image2} alt={img.alt} className="correction" />
-            <h1>{img.titre}</h1>
+            <h2>{img.titre}</h2>
             <img src={img.image2} alt={img.alt} className="correction" />
             <img src={img.image} alt={img.alt} />
-            <h1>{img.titre}</h1>
+            <h2>{img.titre}</h2>
           </div>
         ))}
       </div>
