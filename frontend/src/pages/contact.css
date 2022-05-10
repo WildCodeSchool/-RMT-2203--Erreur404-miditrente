@@ -37,9 +37,16 @@
 }
 
 .contact_label_qb {
+  font-weight: bold;
   color: var(--dark);
   display: block;
-  margin-block-start: 1em;
+  margin-block-start: 1rem;
+}
+
+.contact_required_qb {
+  margin: 0;
+  color: var(--dark);
+  font-weight: 100;
 }
 
 .contact_input_qb {

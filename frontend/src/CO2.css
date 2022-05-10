@@ -25,7 +25,7 @@
   padding: 3rem;
   overflow: hidden;
 }
-.co2_main_tg h1 {
+.co2_main_tg h2 {
   margin-top: 7rem;
 }
 
@@ -46,7 +46,7 @@
   padding: 2rem;
   justify-content: center;
   white-space: pre-line;
-  text-align: center;
+  text-align: left;
 }
 @media screen and (max-width: 768px) {
   .co2_main_tg h1,

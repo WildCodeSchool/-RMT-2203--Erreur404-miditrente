@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Home from "./pages/Home";
 import Info from "./pages/Info";
@@ -17,6 +18,9 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
+        <Helmet>
+          <title> 3arth keeper | Accueil </title>
+        </Helmet>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Info" element={<Info />} />

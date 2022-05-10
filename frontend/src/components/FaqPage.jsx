@@ -10,28 +10,27 @@ import planetfaq from "../assets/planetfaq.png";
 function FaqPage() {
   const [faqs, setFaqs] = useState([
     {
-      question: "C'est quoi une limite planétaire?",
+      question: "C'est quoi une limite planétaire ?",
       answer:
-        "Les limites planétaires sont les seuils que l'humanité ne devrait pas dépasser pour ne pas compromettre les conditions favorables dans lesquelles elle a pu se développer et pour pouvoir durablement vivre dans un écosystème sûr, c’est-à-dire en évitant les modifications brutales et difficilement prévisibles de l'environnement planétaire. Ce concept a été proposé par une équipe internationale de vingt-six chercheurs et publié en 2009. Il a depuis été mis à jour par des publications régulières.",
+        "Les limites planétaires sont les seuils que l'humanité ne devrait pas dépasser pour ne pas compromettre les conditions favorables dans lesquelles elle a pu se développer et pour pouvoir durablement vivre dans un écosystème sûr, c’est-à-dire en évitant les modifications brutales et difficilement prévisibles de l'environnement planétaire.\nCe concept a été proposé par une équipe internationale de vingt-six chercheurs et publié en 2009. Il a depuis été mis à jour par des publications régulières.",
       open: false,
     },
     {
-      question: "Combien de limites planétaires existe-t-il?",
+      question: "Combien de limites planétaires existe-t-il ?",
       answer:
-        "Il existe neuf processus retenus comme limites, dont huit sont chiffrés par les chercheurs et six sont déjà franchies (la 6e a été franchie en 2022).",
+        "Il existe neuf processus retenus comme limites, dont six sont déjà franchies:\n🔴 le changement climatique\n🔴 l’érosion de la biodiversité\n🔴 les perturbations globales du cycle de l’azote et du phosphore\n🔴 l’usage des sols\n🟢 l’acidification des océans\n🟢 la déplétion de la couche d’ozone\n🟢 les aérosols atmosphériques\n🔴 l’usage de l’eau douce (dernière limite franchie en 2022)\n🔴 les pollutions chimiques",
+      open: false,
+    },
+    {
+      question: "Quelles limites sont déjà atteintes ?",
+      answer:
+        "🔴 le changement climatique :\nconcentration atmosphérique en CO2 inférieure à 350 ppm et/ou une variation maximale de +1 W/m2 du forçage radiatif.\n🔴 l’érosion de la biodiversité :\ntaux d’extinction « normal » des espèces inférieur à dix espèces par an sur un million. Or, le taux actuel d’extinction planétaire serait cent à mille fois supérieur à l'échelle de la planète. Ces disparitions ont des impacts majeurs sur les écosystèmes et sur les fonctions qui ne sont plus remplies par les espèces disparues.\n🔴 les perturbations globales du cycle de l’azote et du phosphore :\n limite à la fixation industrielle et agricole de N2 à 35 Tg/an et apport annuel de phosphore aux océans inférieur à 10 fois le lessivage naturel du phosphore. La modification des cycles de l’azote et du phosphore contenu dans les sols résulte notamment de l’agriculture et de l’élevage intensifs. L’usage d’engrais et les déjections issues de l’élevage contribuent à perturber ces cycles indispensables au bon état des sols et des eaux. La limite était déjà atteinte pour l’azote en 2009.\n4: Modifications des usages des sols : maximum de 15 % de la surface de terres libres de glaces convertie en terres agricoles.\n🔴 l’usage de l’eau douce :\ninférieure à 4 000 km3/an de consommation des ressources en eaux de ruissellement.\n6: Diminution de la couche d'ozone stratosphérique :\nréduction inférieure à 5 % dans la concentration en ozone par rapport au niveau pré-industriel de 290 unités Dobson.\n7: Acidification des océans :\ntaux moyen de saturation de l'eau de mer de surface en aragonite supérieur ou égal à 80 % du niveau pré-industriel.\n\nDeux limites ne peuvent pas encore être quantifiées, par manque de données :\n🔴 les pollutions chimiques.\n9: Concentration des aérosols atmosphériques.",
       open: false,
     },
     {
       question: `C'est quoi le "jour du dépassement"?`,
       answer: `Le jour du dépassement de la Terre (en anglais : Earth Overshoot Day) correspond à la date de l’année, calculée par l'ONG américaine Global Footprint Network, à partir de laquelle l’humanité est supposée avoir consommé l’ensemble des ressources que la planète est capable de régénérer en un an. Passée cette date, l’humanité puiserait donc de manière irréversible dans les réserves "non renouvelables" (à échelle de temps humaine) de la Terre. En 2021, l'ONG a estimé cette date au 29 juillet.
       La date peut aussi être calculée par pays. En France, elle a été atteinte le 5 mai 2021. Cela signifie globalement qu'à ce rythme, la France aurait besoinde de 2,9 Terre(s) pour subvenir à ses besoins de l'année.`,
-      open: false,
-    },
-    {
-      question:
-        "A quoi ça sert d'être écolo si les autres font pas d'efforts ?",
-      answer:
-        "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
       open: false,
     },
     {
@@ -138,7 +137,14 @@ function FaqPage() {
                 </div>
               </div>
               <div className="actions_engagementExplanation_dd">
-                {faq.open === true ? faq.answer : ""}
+                {faq.open === true
+                  ? faq.answer.split("\n").map((e) => (
+                      <>
+                        {e}
+                        <br />
+                      </>
+                    ))
+                  : ``}
               </div>
             </div>
           ))}

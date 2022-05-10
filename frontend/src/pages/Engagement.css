@@ -45,7 +45,6 @@ span {
   color: white;
   transition: all 0.4s cubic-bezier(1, -0.16, 0.6, 1.35);
 }
-
 .btn:not(:last-child) {
   margin-right: 1rem;
 }
@@ -65,6 +64,7 @@ span {
 }
 .actions_main_tg {
   display: flex;
+  background-color: black;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -86,6 +86,7 @@ span {
 }
 .actions_container_tg {
   display: flex;
+  margin: 0;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -101,7 +102,6 @@ span {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-
 .actions_bouton_tg {
   border: 0;
   background-color: var(--dark);
@@ -132,9 +132,11 @@ span {
 .actions_engagementExplanation_tg {
   background-color: grey;
   border: solid white 1px;
+  border-radius: 0;
   padding: 0.7rem;
   width: 100%;
   cursor: pointer;
+
   font-size: 0.9rem;
   color: white;
 }
@@ -147,6 +149,7 @@ span {
   background-color: var(--light);
   color: var(--dark);
 }
+
 .actions_engagement_like_button_tg {
   width: 50px;
   background-color: var(--dark);
@@ -157,6 +160,7 @@ span {
   cursor: pointer;
   transform: scale(1.4);
 }
+
 .actions_div_tg {
   background-color: var(--dark);
   font-size: 1rem;
@@ -178,6 +182,7 @@ span {
     display: grid;
     justify-content: center;
   }
+
   .btn {
     background-color: #19202e;
     border: none;
@@ -185,6 +190,7 @@ span {
     font-size: inherit;
     color: white;
   }
+
   .btn:not(:last-child) {
     margin-right: 0;
   }

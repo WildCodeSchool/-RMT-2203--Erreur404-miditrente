@@ -64,7 +64,9 @@ export default function form() {
             {...register("Name", { required: true })}
           />
           {/* Si le champ n'est pas rempli, on indique à l'utilisateur que ce champ est requis. */}
-          {errors.Name?.type === "required" && "Name is required"}
+          {errors.Name?.type === "required" && (
+            <p className="contact_required_qb">Name is required</p>
+          )}
         </label>
         <label className="contact_label_qb" htmlFor="emailInput">
           Email :
@@ -75,7 +77,9 @@ export default function form() {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...register("Email", { required: true })}
           />
-          {errors.Email?.type === "required" && "Email is required"}
+          {errors.Email?.type === "required" && (
+            <p className="contact_required_qb">Email is required</p>
+          )}
         </label>
         <label className="contact_label_qb" htmlFor="sujetlInput">
           Quel est le sujet ?
@@ -86,7 +90,9 @@ export default function form() {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...register("Sujet", { required: true })}
           />
-          {errors.Sujet?.type === "required" && " Sujet is required"}
+          {errors.Sujet?.type === "required" && (
+            <p className="contact_required_qb">Sujet is required</p>
+          )}
         </label>
         <label className="contact_label_qb" htmlFor="messageInput">
           Message :
@@ -98,7 +104,9 @@ export default function form() {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...register("Message", { required: true })}
           />
-          {errors.Message?.type === "required" && "Message is required"}
+          {errors.Message?.type === "required" && (
+            <p className="contact_required_qb">Message is required</p>
+          )}
         </label>
         <button type="submit" value="send" className="button_form_qb">
           submit
