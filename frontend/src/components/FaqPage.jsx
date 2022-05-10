@@ -27,14 +27,12 @@ function FaqPage() {
       open: false,
     },
     {
-      question: `C'est quoi le "jour du dépassement"?`,
-      answer: `Le jour du dépassement de la Terre (en anglais : Earth Overshoot Day) correspond à la date de l’année, calculée par l'ONG américaine Global Footprint Network, à partir de laquelle l’humanité est supposée avoir consommé l’ensemble des ressources que la planète est capable de régénérer en un an. Passée cette date, l’humanité puiserait donc de manière irréversible dans les réserves "non renouvelables" (à échelle de temps humaine) de la Terre. En 2021, l'ONG a estimé cette date au 29 juillet.
-      La date peut aussi être calculée par pays. En France, elle a été atteinte le 5 mai 2021. Cela signifie globalement qu'à ce rythme, la France aurait besoinde de 2,9 Terre(s) pour subvenir à ses besoins de l'année.`,
+      question: `C’est quoi le changement climatique?`,
+      answer: `On considère que de dépassement de certains seuils  en matière de volume émis ou extrait de l’environnement sont responsable de perturbations significatives de la température globale, notamment une variation de plus de 1 W/m2 du forçage radiatif.\nLe forçage radiatif, appliqué au réchauffement climatique, mesure la propension d’un facteur, comme par exemple la concentration en gaz à effet de serre, à perturber l’équilibre énergétique de la Terre`,
       open: false,
     },
     {
-      question:
-        "Oui mais, la banquise, elle se reconstruit l'hiver avec le froid... non?",
+      question: "C’est quoi l’érosion de la biodiversité?",
       answer:
         "	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Fhtagn ngs'uhn Hastur shaggyar k'yarnak, ee ngshagg shugg n'ghft sgn'wahl h'li'hee sll'ha r'luh nilgh'ri hrii nilgh'ri, shtunggli hupadgh vulgtm ulnagl li'hee goka y-lw'nafh fm'latgh throd. Ee gnaiih orr'e lloig vulgtlagln 'ai ooboshu, uln gof'nn cgotha shagg ron ch' Nyarlathotep, f'Chaugnar Faugn geb llllnyth h'shagg kadishtu. ",
       open: false,
