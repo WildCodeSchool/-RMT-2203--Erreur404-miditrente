@@ -27,7 +27,7 @@ function App() {
           <Route path="/Co2" element={<Co2 />} />
           <Route path="/Faq" element={<FaqList />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Agir" element={<Engagement />} />
+          <Route path="/Engagement" element={<Engagement />} />
           <Route path="*" element={<Err404 />} />
         </Routes>
       </div>

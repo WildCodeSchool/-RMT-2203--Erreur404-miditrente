@@ -43,12 +43,12 @@ function Nav() {
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
-            Concentration Co2
+            La situation
           </Link>
         </li>
         <li className="navbar_item_mt">
           <Link
-            to="/Agir"
+            to="/Engagement"
             activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
