@@ -10,6 +10,7 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "chart.js": "^3.7.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.1.0",
