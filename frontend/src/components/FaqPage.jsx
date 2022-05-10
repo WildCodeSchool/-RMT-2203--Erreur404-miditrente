@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import "../pages/Faq.css";
+import "../pages/faq.css";
 import planetfaq from "../assets/planetfaq.png";
+
 /**
  *
  * @returns FAQ content
  */
-
 function FaqPage() {
   const [faqs, setFaqs] = useState([
     {
