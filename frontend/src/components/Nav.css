@@ -56,7 +56,7 @@
   width: 100%;
   background: var(--light);
   transition: all ease-in-out 250ms;
- }
+}
 
 .navbar_burger_mt {
   background: transparent;
