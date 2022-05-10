@@ -63,6 +63,7 @@ span {
 }
 .actions_main_tg {
   display: flex;
+  background-color: black;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -84,7 +85,7 @@ span {
 }
 .actions_container_tg {
   display: flex;
-  background-color: black;
+  margin: 0;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -98,7 +99,7 @@ span {
   width: 100%;
   font-size: 1rem;
   margin-bottom: 1rem;
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 .actions_bouton_tg {
   border: 0;
@@ -130,6 +131,7 @@ span {
 .actions_engagementExplanation_tg {
   background-color: grey;
   border: solid white 1px;
+  border-radius: 0;
   padding: 0.7rem;
   width: 100%;
   cursor: pointer;
