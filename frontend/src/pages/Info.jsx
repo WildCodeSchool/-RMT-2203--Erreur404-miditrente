@@ -1,7 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet";
+
 export default function Info() {
   return (
     <main className="main">
+      <Helmet>
+        <title> 3arth keeper | A propos</title>
+      </Helmet>
       <h1>A Propos</h1>
       <h2>Le rechauffement climatique</h2>
       <p>

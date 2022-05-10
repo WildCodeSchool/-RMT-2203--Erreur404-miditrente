@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import Actions from "../components/Actions";
 import Filter from "../components/Filter";
 import EasterEgg from "../components/EasterEgg";
@@ -24,11 +25,15 @@ function Engagement() {
 
   return (
     <div className="engagement_main_tg">
+      <Helmet>
+        <title> 3arth keeper | Agir </title>
+      </Helmet>
       <h1 className="engagement_h1_tg">
         Agir <span>maintenant</span>{" "}
       </h1>
       <h3> Vos engagements :</h3>
       <Button categories={categories} handleClick={handleClick} />
+
       <Filter value={value} handleValue={setValue} />
       {selection
         .filter((name) => name.text.includes(value))
