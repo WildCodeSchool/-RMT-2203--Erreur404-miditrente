@@ -12,13 +12,13 @@ function Co2() {
   return (
     <div className="co2_main_tg">
       <Helmet>
-        <title> 3arth keeper | Info </title>
+        <title> 3arth keeper | Situation </title>
       </Helmet>
-      <h1 className="co2_firstchild_tg">Concentration de CO2</h1>
+      <h2 className="co2_firstchild_tg">Concentration de CO2</h2>
       <ChartsCO2 />
-      <h1>Courbe de température</h1>
+      <h2>Courbe de température</h2>
       <ChartsTemp />
-      <h1>Fonte des glaces</h1>
+      <h2>Fonte des glaces</h2>
       <ChartsIceExtent />
       {explicationData.map((explication) => (
         <Explication data={explication} />
