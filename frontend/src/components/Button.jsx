@@ -5,7 +5,12 @@ function Button({ categories, handleClick }) {
     <div className="buttons">
       {categories.map((b) => {
         return (
-          <button type="button" onClick={() => handleClick(b)} className="btn">
+          <button
+            key={b}
+            type="button"
+            onClick={() => handleClick(b)}
+            className="btn"
+          >
             {b}
           </button>
         );

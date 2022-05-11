@@ -19,7 +19,6 @@ function Nav() {
         <li className="navbar_item_mt">
           <Link
             to="/"
-            activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
@@ -29,7 +28,6 @@ function Nav() {
         <li className="navbar_item_mt">
           <Link
             to="/Info"
-            activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
@@ -39,7 +37,6 @@ function Nav() {
         <li className="navbar_item_mt">
           <Link
             to="/Co2"
-            activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
@@ -49,7 +46,6 @@ function Nav() {
         <li className="navbar_item_mt">
           <Link
             to="/Engagement"
-            activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
@@ -59,7 +55,6 @@ function Nav() {
         <li className="navbar_item_mt">
           <Link
             to="/Contact"
-            activeClassName="active"
             className="navbar_link_mt"
             onClick={() => setShowLinks(!showlinks)}
           >
