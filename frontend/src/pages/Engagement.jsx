@@ -47,7 +47,6 @@ function Engagement() {
     const valide = selection.filter(
       (name) => name.text.includes(value) && name.engage === true
     );
-    console.log(valide);
     return valide.length;
   };
 
@@ -63,8 +62,8 @@ function Engagement() {
       <h1 className="engagement_h1_tg">
         Agir <span>maintenant</span>{" "}
       </h1>
-      <h3> Vos engagements :</h3>
-      <h6>{(100 * getEngage()) / selection.length}</h6>
+      <h3> Votre niveau engagement actuel : </h3>
+      <h6>{Math.round((100 * getEngage()) / selection.length)} %</h6>
       <Button categories={categories} handleClick={handleClick} />
       <Filter value={value} handleValue={setValue} />
       {selection
