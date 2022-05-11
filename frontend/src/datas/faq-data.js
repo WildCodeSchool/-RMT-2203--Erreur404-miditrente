@@ -50,7 +50,7 @@ const faqData = [
   {
     id: 7,
     question:
-      "Le trou de la couche d'ozone, ça fait longteemps que c'est grave, non?",
+      "Le trou de la couche d'ozone, ça fait longtemps que c'est grave, non?",
     answer:
       "Non, cette limite n'est pas encore atteinte, même si la couche d'ozone est déjà entamée",
     open: false,
