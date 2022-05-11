@@ -73,6 +73,7 @@ function Engagement() {
         })
         .map((data) => (
           <Actions
+            key={data.id}
             totalEngagement={totalEngagement}
             data={data}
             handleLikes={handleLikes}
