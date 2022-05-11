@@ -1,0 +1,205 @@
+:root {
+  --light: rgba(255, 255, 255, 0.872);
+  --dark: rgb(0, 0, 0);
+  --alt-color: blueviolet;
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --title-font-size: ;
+  --text-font-size: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span {
+  color: #bc0035;
+  font-family: "Playfair Display", serif;
+}
+h6 {
+  color: white;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.engagement_main_tg {
+  padding: 5rem 3rem;
+  padding-bottom: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.engagement_h1_tg {
+  margin-top: 5rem;
+}
+.buttons {
+  width: 70%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  background-color: #19202e;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  transition: all 0.4s cubic-bezier(1, -0.16, 0.6, 1.35);
+}
+.btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: #bc0035;
+  cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  border: none;
+}
+.filter_main_tg {
+  margin-bottom: 3rem;
+}
+.actions_main_tg {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.actions_new_main_tg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 1px solid white;
+  background: var(--dark);
+}
+.actions_mt {
+  width: 100%;
+  padding: 1.2rem 1.2rem;
+  background-color: #19202e;
+  margin-bottom: 2rem;
+}
+.actions_container_tg {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.actions_engagementType_tg {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.actions_bouton_tg {
+  border: 0;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 0.7rem;
+  width: 100%;
+  font-size: 0.65rem;
+  transition: none 2s;
+}
+
+.actions_new_bouton_tg {
+  border: 0;
+  background-color: var(--dark);
+  border: solid black 1px;
+  color: var(--dark);
+  padding: 0.7rem;
+  width: 100%;
+  font-size: 0.65rem;
+  transition: none 2s;
+}
+
+.actions_container_tg span {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: inherit;
+}
+
+.actions_engagementExplanation_tg {
+  background-color: grey;
+  border: solid white 1px;
+  border-radius: 0;
+  padding: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+
+  font-size: 0.9rem;
+  color: white;
+}
+.actions_engagementExplanation_tg:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.filter_main_tg * {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.actions_engagement_like_button_tg {
+  width: 50px;
+  background-color: var(--dark);
+  margin-bottom: 0.7rem;
+}
+.actions_engagement_like_button_tg:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.actions_div_tg {
+  background-color: var(--dark);
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .engagement_main_tg {
+    padding: 5rem 1rem;
+  }
+
+  .buttons {
+    width: 30%;
+    margin: 1rem auto;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+  }
+
+  .btn {
+    background-color: #19202e;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 0;
+  }
+  .filter_main_tg * {
+    width: 26vh;
+  }
+}

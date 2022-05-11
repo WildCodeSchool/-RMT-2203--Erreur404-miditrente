@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap");
+
+.err404_background_qb {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  font-family: "Roboto Serif", serif;
+}
+
+.err404_earth_qb {
+  height: 20rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Roboto Serif", serif;
+}
+
+.err404_page_qb > h1 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.err404_error_qb {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+}
+
+.err404_chiffre_qb {
+  margin-top: 2rem;
+  width: 90px;
+  height: 140px;
+}
+
+.err404_button_404_qb {
+  width: 7rem;
+  height: 4rem;
+  background-color: #ff7f27;
+  border-radius: 10px;
+  font-size: large;
+  font-family: "Roboto Serif", serif;
+}
+
+@media screen and (min-width: 768px) {
+  .err404_earth_qb {
+    height: 30rem;
+  }
+
+  .err404_error_qb {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .err404_chiffre_qb {
+    margin-top: 6.5rem;
+    width: 160px;
+    height: 250px;
+  }
+}

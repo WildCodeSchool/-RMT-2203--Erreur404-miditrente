@@ -1,0 +1,59 @@
+:root {
+  --light: rgba(255, 255, 255, 0.872);
+  --dark: rgb(0, 0, 0);
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --title-font-size: ;
+  --text-font-size: ;
+}
+
+.co2_main_tg {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.co2_main_tg * {
+  padding: 0 1.5rem;
+}
+.co2_main_tg {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  overflow: hidden;
+}
+.co2_main_tg h2 {
+  margin-top: 7rem;
+}
+
+.co2_graph_tg {
+  height: 50vh;
+  background-color: yellow;
+  border-radius: 2rem;
+  margin: 1rem 0 3rem;
+}
+.explications_ice_dd {
+  background-color: var(--dark);
+}
+
+.explication_section_tg {
+  margin-top: 2rem;
+  width: 100%;
+  border: 0.9px solid white;
+  padding: 2rem;
+  justify-content: center;
+  white-space: pre-line;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .co2_main_tg h1,
+  h2 {
+    text-align: center;
+  }
+  .co2_main_tg * {
+    padding: 0;
+  }
+}

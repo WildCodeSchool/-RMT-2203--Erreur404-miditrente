@@ -1,0 +1,163 @@
+.easterEgg_main_tg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.correction {
+  width: 10px;
+  height: 10px;
+}
+
+.easterEgg_container_tg {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 2rem;
+}
+
+.set * {
+  width: 10%;
+  height: auto;
+  opacity: 50%;
+  transition: ease-in-out 2s;
+}
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5rem 0;
+  font-weight: bold;
+}
+.set2 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5rem 0;
+  font-weight: bold;
+}
+
+.set2 * {
+  width: 10%;
+  height: auto;
+  opacity: 50%;
+  transition: ease-in-out 2s;
+  color: red;
+  margin: 2rem;
+}
+.set h2:nth-child(6) {
+  left: 70%;
+  animation: animate 30s linear infinite;
+}
+.set2 h2:nth-child(6) {
+  left: 40%;
+  animation: animate 30s linear infinite;
+}
+
+.set2 h2:nth-child(3) {
+  left: 30%;
+  animation: animate 15s linear infinite;
+}
+
+.set2 img:nth-child(1) {
+  animation: animate 30s linear infinite;
+  left: 50%;
+}
+.set2 img:nth-child(2) {
+  animation: animate 30s linear infinite;
+  left: 60%;
+}
+
+.set2 img:nth-child(4) {
+  animation: animate 30s linear infinite;
+  left: 10%;
+}
+
+.set2 img:nth-child(5) {
+  animation: animate 30s linear infinite;
+  left: 50%;
+}
+
+.set img:nth-child(1) {
+  left: 20%;
+  animation: animate 30s linear infinite;
+}
+.set img:nth-child(2) {
+  left: 20%;
+  animation: animate 30s linear infinite;
+}
+.set h2:nth-child(3) {
+  left: 40%;
+  animation: animate 15s linear infinite;
+}
+.set img:nth-child(4) {
+  left: 0%;
+  animation: animate 30s linear infinite;
+}
+.set img:nth-child(5) {
+  left: 85%;
+  animation: animate 30s linear infinite;
+}
+.set img:nth-child(6) {
+  left: 5%;
+  animation: animate 30s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(-20px, -200px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-20px, -150px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-20px, -100px) rotate(60deg);
+  }
+  40% {
+    transform: translate(-20px, -20px) rotate(100deg);
+  }
+  60% {
+    transform: translate(20px, 50px) rotate(-60deg);
+  }
+  80% {
+    transform: translate(-20px, 100px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    transform: translate(-20px, 200px) rotate(-180deg);
+  }
+}
+
+.easterEgg_main_img {
+  transition: ease-in-out 2s;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .easterEgg_container_tg {
+    display: inline;
+  }
+  .set img:nth-child(1n + 2) {
+    display: none;
+  }
+  .set h2:nth-child(2n + 1) {
+    display: none;
+  }
+  .set * {
+    width: 30%;
+  }
+
+  .set2 * {
+    width: 30%;
+  }
+}

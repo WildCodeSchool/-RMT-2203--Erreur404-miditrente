@@ -1,0 +1,96 @@
+:root {
+  --light: rgba(255, 255, 255, 0.872);
+  --dark: rgb(0, 0, 0);
+  --alt-dark: #19202;
+  --title-color: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --title-font: "Poppins", sans-serif;
+  --text-font: "Poppins", sans-serif;
+  --title-font-size: ;
+  --text-font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.engagement_h1_dd {
+  margin-top: 5rem;
+}
+span {
+  color: #bc0035;
+  font-family: "Playfair Display", serif;
+}
+.engagement_main_dd {
+  padding: 5rem 3rem;
+  text-align: center;
+  align-items: center;
+}
+
+.actions_main_dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 2s ease-in-out;
+  width: 100%;
+  border: 1px solid white;
+  margin-top: 1rem; /* espace inter cartes*/
+}
+
+.actions_container_dd {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 93%;
+}
+
+.actions_engagementType_dd {
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 0.7rem 0.7rem 0;
+  width: 90%;
+  font-size: var(--text-font-size);
+  margin-bottom: 0;
+}
+
+.actions_engagementExplanation_dd {
+  background-color: grey;
+  border: solid white 1px;
+  padding: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--text-font-size);
+  color: white;
+}
+
+.actions_engagement_like_button_dd2 {
+  width: 50px;
+  text-align: right;
+  transform: rotate(120deg);
+}
+.actions_engagement_like_button_dd2:hover {
+  width: 50px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: right;
+  transform: rotate(120deg);
+}
+
+.actions_engagement_like_button_dd:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+.actions_engagement_like_button_dd {
+  width: 50px;
+  text-align: right;
+}
+
+.actions_div_dd {
+  width: 50px;
+}
