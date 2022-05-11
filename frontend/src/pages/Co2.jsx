@@ -21,7 +21,7 @@ function Co2() {
       <h2>Fonte des glaces</h2>
       <ChartsIceExtent />
       {explicationData.map((explication) => (
-        <Explication data={explication} />
+        <Explication key={explication.id} data={explication} />
       ))}
     </div>
   );
