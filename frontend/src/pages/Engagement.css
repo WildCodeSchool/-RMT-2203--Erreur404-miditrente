@@ -23,6 +23,8 @@ span {
 }
 h6 {
   color: white;
+  font-size: 16px;
+  line-height: 1.25;
 }
 .engagement_main_tg {
   padding: 5rem 3rem;
@@ -81,6 +83,7 @@ h6 {
   align-items: center;
   width: 100%;
   border: 1px solid white;
+  background: var(--dark);
 }
 .actions_mt {
   width: 100%;
