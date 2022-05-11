@@ -16,10 +16,8 @@
   box-sizing: border-box;
 }
 span {
-
-  color:#bc0035;
-  font-family: 'Playfair Display', serif;
-
+  color: #bc0035;
+  font-family: "Playfair Display", serif;
 }
 h6 {
   color: white;
@@ -31,35 +29,35 @@ h6 {
   align-items: center;
 }
 
-.engagement_h1_tg{
+.engagement_h1_tg {
   margin-top: 5rem;
 }
-.buttons{
+.buttons {
   width: 70%;
   margin: 3rem auto;
   text-align: center;
 }
 
-.btn{
-  padding: .5rem 2rem;
+.btn {
+  padding: 0.5rem 2rem;
   background-color: #19202e;
   border: none;
   font-family: inherit;
   font-size: inherit;
   color: white;
-  transition: all 0.4s cubic-bezier(1,-0.16,.6,1.35);
+  transition: all 0.4s cubic-bezier(1, -0.16, 0.6, 1.35);
 }
-.btn:not(:last-child){
+.btn:not(:last-child) {
   margin-right: 1rem;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #bc0035;
   cursor: pointer;
 }
 
-
-.btn:active, .btn:focus{
+.btn:active,
+.btn:focus {
   outline: none;
   border: none;
 }
@@ -84,10 +82,9 @@ h6 {
 }
 .actions_mt {
   width: 100%;
-    padding: 1.2rem 1.2rem;
-    background-color: #19202e;
-    margin-bottom: 2rem;
-
+  padding: 1.2rem 1.2rem;
+  background-color: #19202e;
+  margin-bottom: 2rem;
 }
 .actions_container_tg {
   display: flex;
@@ -105,8 +102,7 @@ h6 {
   width: 100%;
   font-size: 1rem;
   margin-bottom: 1rem;
-    margin-top: 1rem;
-
+  margin-top: 1rem;
 }
 .actions_bouton_tg {
   border: 0;
@@ -143,9 +139,8 @@ h6 {
   width: 100%;
   cursor: pointer;
 
-  font-size: .9rem;
-    color: white;
-
+  font-size: 0.9rem;
+  color: white;
 }
 .actions_engagementExplanation_tg:hover {
   cursor: pointer;
@@ -157,15 +152,15 @@ h6 {
   color: var(--dark);
 }
 
-.actions_engagement_like_button_tg{
+.actions_engagement_like_button_tg {
   width: 50px;
   background-color: var(--dark);
   margin-bottom: 0.7rem;
 }
 .actions_engagement_like_button_tg:hover {
-  transition: all .3s ease-in-out;
-    cursor: pointer;
-    transform: scale(1.4);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 .actions_div_tg {
@@ -177,8 +172,7 @@ h6 {
   align-items: center;
 }
 
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
   .engagement_main_tg {
     padding: 5rem 1rem;
   }
@@ -192,7 +186,6 @@ h6 {
   }
 
   .btn {
-
     background-color: #19202e;
     border: none;
     font-family: inherit;
@@ -200,8 +193,7 @@ h6 {
     color: white;
   }
 
-  .btn:not(:last-child){
-
+  .btn:not(:last-child) {
     margin-right: 0;
   }
   .filter_main_tg * {
