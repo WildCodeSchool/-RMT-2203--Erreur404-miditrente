@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Actions from "../components/Actions";
 import Filter from "../components/Filter";
@@ -11,7 +11,9 @@ import "./Engagement.css";
 function Engagement() {
   const [value, setValue] = useState("");
   const [selection, setSelection] = useState(engagementData);
+  const [totalEngagement, setTotalEngagement] = useState(1);
   const categories = ["Tous", "Facile", "Intermediaire", "Expert"];
+
   const handleClick = (button) => {
     if (button === "Tous") {
       setSelection(engagementData);
@@ -23,6 +25,36 @@ function Engagement() {
     setSelection(filteredData);
   };
 
+  const handleLikes = (data, type) => {
+    const updateSelection = [...selection];
+    const index = updateSelection.indexOf(data);
+    if (type === "plus") {
+      updateSelection[index].engage = true;
+      updateSelection[index].likes += 1;
+    }
+    if (type === "minus") {
+      updateSelection[index].engage = false;
+      updateSelection[index].likes -= 1;
+    }
+    setSelection(updateSelection);
+  };
+
+  const getTotalEngagement = () => {
+    const total = selection.reduce((tot, element) => tot + element.likes, 0);
+    setTotalEngagement(total);
+  };
+  const getEngage = () => {
+    const valide = selection.filter(
+      (name) => name.text.includes(value) && name.engage === true
+    );
+    console.log(valide);
+    return valide.length;
+  };
+
+  useEffect(() => {
+    getTotalEngagement();
+  }, [selection]);
+
   return (
     <div className="engagement_main_tg">
       <Helmet>
@@ -32,6 +64,7 @@ function Engagement() {
         Agir <span>maintenant</span>{" "}
       </h1>
       <h3> Vos engagements :</h3>
+      <h6>{(100 * getEngage()) / selection.length}</h6>
       <Button categories={categories} handleClick={handleClick} />
       <Filter value={value} handleValue={setValue} />
       {selection
@@ -40,7 +73,11 @@ function Engagement() {
           return b.likes - a.likes;
         })
         .map((data) => (
-          <Actions data={data} />
+          <Actions
+            totalEngagement={totalEngagement}
+            data={data}
+            handleLikes={handleLikes}
+          />
         ))}
       );
       {value === "midiTrente" ? <EasterEgg /> : ""}

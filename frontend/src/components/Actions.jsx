@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import environnement from "../assets/environnement.png";
 import environnementNew from "../assets/environnement_new.png";
 
-function Actions({ data }) {
-  const [likes, setLikes] = useState(data.likes);
+function Actions({ data, handleLikes, totalEngagement }) {
   const [buttonActive, setButtonActive] = useState(true);
   const [whyengaged, setWhyEngaged] = useState(true);
   const [msg, setMsg] = useState("Pourquoi s'engager ?");
 
   const handleClick = () => {
     if (buttonActive === true) {
-      setLikes((like) => like + 1);
+      handleLikes(data, "plus");
       setMsg("Merci de contribuer au sauvetage de notre planète");
     } else {
-      setLikes((like) => like - 1);
+      handleLikes(data, "minus");
       setMsg("Pourquoi s'engager ?");
     }
     setButtonActive(!buttonActive);
@@ -21,6 +20,7 @@ function Actions({ data }) {
 
   return (
     <div className="actions_mt">
+      <h6>{(100 * data.likes) / totalEngagement}</h6>
       <div className={buttonActive ? "actions_main_tg" : "actions_new_main_tg"}>
         <section className="actions_container_tg">
           <h3 className="actions_engagementType_tg">{data.text}</h3>
@@ -38,7 +38,7 @@ function Actions({ data }) {
                   alt="environnement"
                   className="actions_engagement_like_button_tg"
                 />
-                {likes}
+                {data.likes}
               </div>
             ) : (
               <div className="actions_div_tg">
@@ -47,7 +47,7 @@ function Actions({ data }) {
                   alt="environnementNew"
                   className="actions_engagement_like_button_tg"
                 />
-                Vous et {likes - 1} autres personnes engagées
+                Vous et {data.likes - 1} autres personnes engagées
               </div>
             )}
           </button>
