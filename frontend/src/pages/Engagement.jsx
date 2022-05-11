@@ -63,7 +63,7 @@ function Engagement() {
         Agir <span>maintenant</span>{" "}
       </h1>
       <h3> Votre niveau engagement actuel : </h3>
-      <h6>{(100 * getEngage()) / selection.length} %</h6>
+      <h6>{Math.round((100 * getEngage()) / selection.length)} %</h6>
       <Button categories={categories} handleClick={handleClick} />
       <Filter value={value} handleValue={setValue} />
       {selection

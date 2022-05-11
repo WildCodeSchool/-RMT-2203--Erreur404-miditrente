@@ -20,7 +20,10 @@ function Actions({ data, handleLikes, totalEngagement }) {
 
   return (
     <div className="actions_mt">
-      <h6>{(100 * data.likes) / totalEngagement}% de personne sont engagés</h6>
+      <h6>
+        {((100 * data.likes) / totalEngagement).toFixed(2)}% de personnes sont
+        engagés
+      </h6>
       <div className={buttonActive ? "actions_main_tg" : "actions_new_main_tg"}>
         <section className="actions_container_tg">
           <h3 className="actions_engagementType_tg">{data.text}</h3>
